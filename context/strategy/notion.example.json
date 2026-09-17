@@ -1,0 +1,32 @@
+{
+  "name": null,
+  "workspace_id": null,
+  "page_id": null,
+  "page_url": null,
+  "databases": {
+    "content": {
+      "title": "Content Board",
+      "database_url": null,
+      "data_source_id": null,
+      "views": {}
+    },
+    "taxonomy": {
+      "title": "Pillars & Topics",
+      "database_url": null,
+      "data_source_id": null,
+      "views": {}
+    },
+    "hooks": {
+      "title": "Hooks",
+      "database_url": null,
+      "data_source_id": null,
+      "views": {}
+    },
+    "creators": {
+      "title": "Creator Inspo DB",
+      "database_url": null,
+      "data_source_id": null,
+      "views": {}
+    }
+  }
+}

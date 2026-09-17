@@ -1,0 +1,531 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "name": "brand-review",
+      "group": "Visuals",
+      "description": "Review a rendered graphic or visual system for message clarity, identity consistency and export quality; make fixes when requested.",
+      "path": "skills/brand-review/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/brand-review/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "brand-system",
+      "group": "Visuals",
+      "description": "Establish or update a client's visual identity, reusable tokens and graphic conventions from their preferences and supplied assets.",
+      "path": "skills/brand-system/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/brand-system/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "capture-context",
+      "group": "Context",
+      "description": "Turn supplied interviews, notes, writing samples and other source material into linked author context with traceable evidence.",
+      "path": "skills/capture-context/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/capture-context/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "content-strategy",
+      "group": "Content",
+      "description": "Define an author's content pillars, topics, subtopics and funnel roles from their audience, evidence, goals and offer.",
+      "path": "skills/content-strategy/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/content-strategy/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "flowchart",
+      "group": "Visuals",
+      "description": "Create editable flowcharts, system maps and funnels with semantic icons, structured operation cards, distinct skill and decision shapes, and verified routing.",
+      "path": "skills/flowchart/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/flowchart/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "graphics-designer",
+      "group": "Visuals",
+      "description": "Create an individual graphic, carousel or banner using the client's supplied visual rules, or a neutral unbranded layout when requested.",
+      "path": "skills/graphics-designer/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/graphics-designer/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        },
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/graphics-designer/SKILL.md",
+          "treatment": "merged into generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "launch-video",
+      "group": "Media",
+      "description": "Create a product launch video from a truthful beat script, available assets and a reproducible motion project.",
+      "path": "skills/launch-video/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/launch-video/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "lead-magnet-creator",
+      "group": "Content",
+      "description": "Build a complete, reusable lead magnet with a clear reader outcome, worked example, editable starting point and tested delivery path.",
+      "path": "skills/lead-magnet-creator/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/lead-magnet-creator/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "linkedin-copywriter",
+      "group": "Content",
+      "description": "Draft or edit one LinkedIn post using the author's context, writing samples, factual sources and intended funnel job.",
+      "path": "skills/linkedin-copywriter/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/linkedin-copywriter/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        },
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/linkedin-copywriter/SKILL.md",
+          "treatment": "merged into generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "long-form",
+      "group": "Content",
+      "description": "Turn a sourced idea into an article or essay with a clear argument, useful examples and traceable factual claims.",
+      "path": "skills/long-form/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/long-form/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "manim-video",
+      "group": "Media",
+      "description": "Create an explanatory animation in Manim from a precise concept, scene plan and verified local renderer.",
+      "path": "skills/manim-video/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/video-use/skills/manim-video/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "newsletter-writer",
+      "group": "Content",
+      "description": "Write a useful newsletter issue from source material, the author's voice and one coherent reader takeaway.",
+      "path": "skills/newsletter-writer/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/newsletter-writer/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "oxygen-linkedin-marketing",
+      "group": "OXYGEN",
+      "description": "Run OXYGEN LinkedIn content and warm-signal motions through Posts, Publishing, Signals, Tables and bounded Sequences.",
+      "path": "skills/oxygen-linkedin-marketing/SKILL.md",
+      "sources": [
+        {
+          "distribution": "OXYGEN CLI skill catalog",
+          "command": "oxygen skills get oxygen-linkedin-marketing --json",
+          "retrieved": "2026-09-14",
+          "cli_version": "1.927.2",
+          "source_content_sha256": "7b2fc6139875e6ce9eb4a34724f2838a54cf415719a07d9c465863f6d0ce2cc3",
+          "treatment": "adapted for this kit; private provenance markers, vendor runbooks and unavailable local references excluded"
+        },
+        {
+          "distribution": "LinkedIn Pipeline Kit update",
+          "retrieved": "2026-09-17",
+          "treatment": "Added native Profile Watcher and separate qualification routing; CLI 1.982.3 watcher and column help checked; links target bundled LinkedIn guides."
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "oxygen-quickstart",
+      "group": "OXYGEN",
+      "description": "Connect LinkedIn Funnel to the reader's OXYGEN workspace and prepare a native Profile Watcher preview using current command schemas.",
+      "path": "skills/oxygen-quickstart/SKILL.md",
+      "sources": [
+        {
+          "distribution": "OXYGEN CLI skill catalog",
+          "command": "oxygen skills get oxygen-quickstart --json",
+          "retrieved": "2026-09-14",
+          "cli_version": "1.927.2",
+          "source_content_sha256": "ee8b12bd5a9da3c0b3392af996692e54b8a5b897df4db565e222474dc88c85ef",
+          "treatment": "adapted for this kit; private provenance markers, vendor runbooks and unavailable local references excluded"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "oxygen-sequencer",
+      "group": "OXYGEN",
+      "description": "Operate native OXYGEN Sequences for new conversations and outreach cadence, including sender readiness, previews, enrollment, dispatch and recovery.",
+      "path": "skills/oxygen-sequencer/SKILL.md",
+      "sources": [
+        {
+          "distribution": "OXYGEN CLI skill catalog",
+          "command": "oxygen skills get oxygen-sequencer --json",
+          "retrieved": "2026-09-14",
+          "cli_version": "1.927.2",
+          "source_content_sha256": "a9218e1d989b1acad44ad65a226c2da37f45a575556329bc85a33cb07d595f4f",
+          "treatment": "adapted for this kit; private provenance markers, vendor runbooks and unavailable local references excluded"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "oxygen-unibox",
+      "group": "OXYGEN",
+      "description": "Triage OXYGEN Messages and Unibox conversations, prepare grounded replies and send only within the user's specified account and thread scope.",
+      "path": "skills/oxygen-unibox/SKILL.md",
+      "sources": [
+        {
+          "distribution": "OXYGEN CLI skill catalog",
+          "command": "oxygen skills get oxygen-unibox --json",
+          "retrieved": "2026-09-14",
+          "cli_version": "1.927.2",
+          "source_content_sha256": "88422c7caae2c30178293bd1226e14896bf781a6beb248db8cdeeb8f35a8ca2b",
+          "treatment": "adapted for this kit; private provenance markers, vendor runbooks and unavailable local references excluded"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "qmd",
+      "group": "Context",
+      "description": "Search and retrieve this repository's author context with optional qmd, using an isolated index for each client folder.",
+      "path": "skills/qmd/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/qmd/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "repurpose-content",
+      "group": "Content",
+      "description": "Turn an interview, newsletter, talk or other long source into distinct content pieces or visual briefs while preserving its facts and voice.",
+      "path": "skills/repurpose-content/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/repurpose-content/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        },
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/repurpose/SKILL.md",
+          "treatment": "merged into generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "researcher",
+      "group": "Content",
+      "description": "Research a content or GTM question using primary evidence and return a source-backed brief with implications and open questions.",
+      "path": "skills/researcher/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/researcher/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "setup-workspace",
+      "group": "Context",
+      "description": "Initialize this content workspace for a new author, including local preferences and optional Notion or local search setup.",
+      "path": "skills/setup-workspace/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/setup-workspace/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "shorts-audio",
+      "group": "Media",
+      "description": "Improve recorded speech using measured levels, restrained noise treatment and listening comparisons against the source.",
+      "path": "skills/shorts-audio/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/shorts-audio/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "shorts-cut",
+      "group": "Media",
+      "description": "Select complete takes and remove false starts or dead air while preserving speech meaning and word boundaries.",
+      "path": "skills/shorts-cut/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/shorts-cut/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "shorts-edit",
+      "group": "Media",
+      "description": "Turn raw talking-head recordings into finished shorts using reviewed take selection, audio, captions, cue-based graphics and final QA.",
+      "path": "skills/shorts-edit/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/shorts-edit/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "shorts-motion",
+      "group": "Media",
+      "description": "Add readable, cue-aligned graphics to a short without obscuring the speaker, captions or the meaning of the footage.",
+      "path": "skills/shorts-motion/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/shorts-motion/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "shorts-qa",
+      "group": "Media",
+      "description": "Verify an edited video for complete speech, correct captions, synchronized graphics, audio integrity, image quality and playback.",
+      "path": "skills/shorts-qa/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/shorts-qa/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "video-use",
+      "group": "Media",
+      "description": "Edit a supplied video through a source-preserving transcript, timeline and visual review workflow using available rendering tools.",
+      "path": "skills/video-use/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/video-use/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "voice-calibration",
+      "group": "Context",
+      "description": "Build or refine an author's writing guide from their own writing samples and edits, without importing another creator's voice.",
+      "path": "skills/voice-calibration/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/voice-calibration/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "week-posts",
+      "group": "Content",
+      "description": "Plan and draft a week of content using the author's configured pillars, source material, voice, cadence and optional Notion board.",
+      "path": "skills/week-posts/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/content-engine-template",
+          "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
+          "path": ".agents/skills/week-posts/SKILL.md",
+          "treatment": "adapted context paths; retained generic procedure"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "x-copywriter",
+      "group": "Content",
+      "description": "Draft concise X posts or threads from grounded source material and the author's actual voice.",
+      "path": "skills/x-copywriter/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/x-copywriter/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "youtube-description",
+      "group": "Media",
+      "description": "Create a YouTube description, resource links and chapters from the actual final video or timestamped transcript.",
+      "path": "skills/youtube-description/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/youtube-description/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "youtube-publisher",
+      "group": "Media",
+      "description": "Upload or update a video on the user's confirmed YouTube channel with verified metadata, processing state and requested visibility.",
+      "path": "skills/youtube-publisher/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/youtube-publisher/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "youtube-script",
+      "group": "Media",
+      "description": "Write a recordable YouTube script with a clear viewer promise, evidence, demo beats and a truthful payoff.",
+      "path": "skills/youtube-script/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/youtube-script/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "youtube-thumbnail",
+      "group": "Media",
+      "description": "Design a legible YouTube thumbnail whose visual promise is supported by the actual video.",
+      "path": "skills/youtube-thumbnail/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/content-vault",
+          "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
+          "path": "skills/youtube-thumbnail/SKILL.md",
+          "treatment": "rewritten portable procedure; no missing helper claims"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    }
+  ]
+}

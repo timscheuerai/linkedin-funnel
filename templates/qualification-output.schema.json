@@ -1,0 +1,59 @@
+{
+  "type": "object",
+  "properties": {
+    "company_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "persona_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "company_disqualified": {
+      "type": "boolean"
+    },
+    "persona_disqualified": {
+      "type": "boolean"
+    },
+    "fit_status": {
+      "type": "string",
+      "enum": [
+        "qualified",
+        "review",
+        "not_fit"
+      ]
+    },
+    "company_reason": {
+      "type": "string"
+    },
+    "persona_reason": {
+      "type": "string"
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "company_score",
+    "persona_score",
+    "company_disqualified",
+    "persona_disqualified",
+    "fit_status",
+    "company_reason",
+    "persona_reason",
+    "missing",
+    "evidence_used"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "source": "Tim Scheuer LinkedIn funnel graphic, 2026-09-17",
+  "scope": "Example diagram and editable source; headline is Tim\u2019s supplied example, not a performance guarantee.",
+  "assets": [
+    {
+      "file": "linkedin-funnel.png",
+      "sha256": "2f426255d69d5edc98eff3e453c712badbe564611cb2fc32ed3db1e977c48bf7",
+      "source": "output-v3/linkedin-funnel-v3.png"
+    },
+    {
+      "file": "linkedin-funnel.gif",
+      "sha256": "fbcbe07a9e73de3a1614bbca56ec4d0e7224069f639eed7dc7e43256bcba4187",
+      "source": "animation-v3/Tim-Scheuer-LinkedIn-Funnel.gif"
+    },
+    {
+      "file": "linkedin-funnel.excalidraw",
+      "sha256": "471561a3442ce771f5aada581d0173fd35f07dd481e3031c4474319a8473212c",
+      "source": "linkedin-funnel-v3.excalidraw"
+    }
+  ]
+}

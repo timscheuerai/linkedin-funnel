@@ -1,0 +1,81 @@
+{
+  "notice": "Synthetic examples using the kit company/icp.example.md and company/persona.example.md rubrics, with current employer identity, business model, company size and role/remit treated as mandatory for this exercise. These are hand-authored expected decisions, not outputs from a model run.",
+  "company_threshold": 70,
+  "persona_threshold": 70,
+  "cases": [
+    {
+      "case": "clear_fit",
+      "evidence_summary": "Example SaaS Ltd: B2B subscription software, 40 employees in Germany, evidenced outbound team. The person is its current Head of Revenue Operations, owns the outbound tooling and pipeline operations.",
+      "expected": {
+        "company_score": 100,
+        "persona_score": 100,
+        "company_disqualified": false,
+        "persona_disqualified": false,
+        "fit_status": "qualified",
+        "company_reason": "All four company criteria are supported.",
+        "persona_reason": "Current remit, ownership and tooling responsibilities are supported.",
+        "missing": [],
+        "evidence_used": [
+          "synthetic company evidence: business model, headcount, location, outbound motion",
+          "synthetic person evidence: current employer, remit, ownership, tooling"
+        ]
+      }
+    },
+    {
+      "case": "company_exclusion",
+      "evidence_summary": "Example Agency Ltd: a 40-person German services agency with outbound activity. The person owns sales operations there. The example company rubric explicitly excludes agencies.",
+      "expected": {
+        "company_score": 60,
+        "persona_score": 100,
+        "company_disqualified": true,
+        "persona_disqualified": false,
+        "fit_status": "not_fit",
+        "company_reason": "Agency exclusion overrides the supported size, geography and outbound points.",
+        "persona_reason": "Person fits the operating remit, but that cannot rescue company fit.",
+        "missing": [],
+        "evidence_used": [
+          "synthetic company evidence: services agency",
+          "synthetic person evidence: current employer and sales-operations remit"
+        ]
+      }
+    },
+    {
+      "case": "missing_headcount",
+      "evidence_summary": "Example Software Ltd: B2B subscription software in Germany with outbound activity, but no supported employee count. Current Head of Revenue Operations with evidenced tooling responsibility.",
+      "expected": {
+        "company_score": 75,
+        "persona_score": 100,
+        "company_disqualified": false,
+        "persona_disqualified": false,
+        "fit_status": "review",
+        "company_reason": "Headcount is mandatory in this exercise; its absence holds the decision despite a high partial score.",
+        "persona_reason": "Current remit and ownership are supported.",
+        "missing": [
+          "company employee count"
+        ],
+        "evidence_used": [
+          "synthetic company evidence: business model, geography, outbound motion",
+          "synthetic person evidence: role and current employer"
+        ]
+      }
+    },
+    {
+      "case": "former_employee",
+      "evidence_summary": "Example SaaS Ltd passes all company criteria. The profile explicitly says the person left the company last year and now has an unrelated role.",
+      "expected": {
+        "company_score": 100,
+        "persona_score": 0,
+        "company_disqualified": false,
+        "persona_disqualified": true,
+        "fit_status": "not_fit",
+        "company_reason": "Company passes the example criteria.",
+        "persona_reason": "Former employee; current responsibilities do not match the target employer.",
+        "missing": [],
+        "evidence_used": [
+          "synthetic company evidence: all company criteria",
+          "synthetic person evidence: ended employment and unrelated current role"
+        ]
+      }
+    }
+  ]
+}
