@@ -62,6 +62,21 @@
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
     },
     {
+      "name": "content-waterfall",
+      "group": "Content waterfall",
+      "description": "Run a weekly content waterfall: find the idea of the week from what is hot on YouTube, X and LinkedIn, make 1 long video, grow its 3 roots into posts on every platform, ship the week and turn the engagers into conversations. Use when the author gives the idea of the week, wants posts from a video, hands over a recording or YouTube link, or asks to repurpose. Orchestrates the stage skills.",
+      "path": "skills/content-waterfall/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/content-waterfall/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
       "name": "flowchart",
       "group": "Visuals",
       "description": "Create editable flowcharts, system maps and funnels with semantic icons, structured operation cards, distinct skill and decision shapes, and verified routing.",
@@ -128,6 +143,21 @@
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
     },
     {
+      "name": "lead-magnet-delivery",
+      "group": "Content waterfall",
+      "description": "Turn a LinkedIn lead-magnet post (\"comment KEYWORD and I'll send it\") into automatic delivery on OXYGEN. Every commenter who asks gets a DM with the link and a public \"Sent it over:)\" reply; 2nd-degree commenters are asked to connect first; nobody is messaged twice. Use when a lead-magnet post is live and the author asks to set up delivery or send the resource to commenters.",
+      "path": "skills/lead-magnet-delivery/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/lead-magnet-delivery/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
       "name": "linkedin-copywriter",
       "group": "Content",
       "description": "Draft or edit one LinkedIn post using the author's context, writing samples, factual sources and intended funnel job.",
@@ -149,6 +179,36 @@
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
     },
     {
+      "name": "linkedin-hook-writer",
+      "group": "Content waterfall",
+      "description": "Write, revise or compare LinkedIn hooks in the author's voice, with measured character counts and mobile-first opening budgets. Use for hook options, first-line edits, or the opening pass inside linkedin-copywriter.",
+      "path": "skills/linkedin-hook-writer/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/linkedin-hook-writer/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
+      "name": "linkedin-unibox-reply",
+      "group": "Content waterfall",
+      "description": "Draft LinkedIn DM replies in the author's voice for Unibox triage and 1:1 follow-ups, one at a time, and never send without the author's yes. Use to triage interested or unanswered LinkedIn threads, draft a DM reply, or rewrite a generic suggested reply into the author's voice.",
+      "path": "skills/linkedin-unibox-reply/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/linkedin-unibox-reply/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
       "name": "long-form",
       "group": "Content",
       "description": "Turn a sourced idea into an article or essay with a clear argument, useful examples and traceable factual claims.",
@@ -162,6 +222,21 @@
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "longform-edit",
+      "group": "Content waterfall",
+      "description": "Edit a long-form YouTube recording into a finished upload, usually a designed talking-head intro with proof graphics followed by a clean, clip-only screen tutorial. Use when a video needs more than a plain cut: an animated intro, numbers shown when they are said, or a few motion graphics.",
+      "path": "skills/longform-edit/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/longform-edit/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
     },
     {
       "name": "manim-video",
@@ -408,6 +483,21 @@
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
     },
     {
+      "name": "talking-head-video-cut",
+      "group": "Content waterfall",
+      "description": "Cut and merge raw OBS or screen-recorded talking-head clips by selecting complete takes, trimming dead air and setup transitions, preserving the native picture, and QAing every join. Use for \"remove the pauses\", \"cut the false starts\", \"just cut and merge\" or a clean long-form YouTube cut.",
+      "path": "skills/talking-head-video-cut/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/talking-head-video-cut/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
       "name": "video-use",
       "group": "Media",
       "description": "Edit a supplied video through a source-preserving transcript, timeline and visual review workflow using available rendering tools.",
@@ -453,6 +543,21 @@
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
     },
     {
+      "name": "x-article-writer",
+      "group": "Content waterfall",
+      "description": "Write or revise a compact native X Article in the author's voice from their newsletter, framework, posts or lead magnet, with the strongest supported result first and useful graphics placed where they explain the argument. Also writes the X post that announces a video. Use for X Articles and illustrated long posts on X; use x-copywriter or x-planner for ordinary X posts.",
+      "path": "skills/x-article-writer/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/x-article-writer/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
       "name": "x-copywriter",
       "group": "Content",
       "description": "Draft concise X posts or threads from grounded source material and the author's actual voice.",
@@ -466,6 +571,21 @@
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "x-planner",
+      "group": "Content waterfall",
+      "description": "Plan the author's X posts together with them, day by day, from 3 lanes: LinkedIn posts repurposed for X, native posts from what is going viral in their niche, and their own launches or assets. Presents a slate for the author to pick and cut, drafts the picks, records their verdicts. Use when planning X for the week or when the content waterfall hands over micro posts and chapter threads.",
+      "path": "skills/x-planner/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/x-planner/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
     },
     {
       "name": "youtube-description",
@@ -526,6 +646,36 @@
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "youtube-thumbnail-outlier-research",
+      "group": "Content waterfall",
+      "description": "Research high-performing YouTube thumbnails in the author's niche, extract the patterns to borrow or avoid, and brief thumbnail concepts before rendering. Use when choosing a thumbnail direction or before youtube-thumbnail renders.",
+      "path": "skills/youtube-thumbnail-outlier-research/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/youtube-thumbnail-outlier-research/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
+      "name": "youtube-title-outlier-packaging",
+      "group": "Content waterfall",
+      "description": "Find YouTube packaging outliers in the author's niche, draft 2 A/B titles from proven structures with every claim marked, and brief thumbnail concepts. Use when choosing or split-testing a YouTube title or packaging a video before recording.",
+      "path": "skills/youtube-title-outlier-packaging/SKILL.md",
+      "sources": [
+        {
+          "repo": "timscheuerai/personal-brand",
+          "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
+          "path": ".agents/skills/youtube-title-outlier-packaging/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
     }
   ]
 }

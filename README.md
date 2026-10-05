@@ -6,20 +6,30 @@ This is the shareable template behind my LinkedIn funnel. Make your own copy, ad
 
 **[Use this template →](https://github.com/new?template_name=linkedin-funnel&template_owner=timscheuerai)** · [Browse all skills](skills/README.md) · [Download ZIP](https://github.com/timscheuerai/linkedin-funnel/archive/refs/heads/main.zip)
 
+## The content waterfall
+
+[![The content waterfall](assets/content-waterfall.gif)](guides/content-waterfall.md)
+
+1 idea a week becomes 1 long video, and the video waterfalls into posts on every platform, with a Claude Code skill for every step.
+
+**[Watch the full walkthrough on YouTube](https://www.youtube.com/watch?v=8z_GiPtnO80)** · [Setup guide for Claude Code](guides/content-waterfall.md) · [Editable map](assets/content-waterfall.excalidraw) · [The 10 content waterfall skills](skills/README.md#content-waterfall-skills)
+
 ## What you get
 
 | Included | What it helps you do |
 |---|---|
 | [23 core content and branding skills](skills/README.md#the-23-core-skills) | Research, write, repurpose and design content in your own voice |
+| [10 content waterfall skills](skills/README.md#content-waterfall-skills) | Turn 1 video a week into posts on every platform, then into conversations |
 | [6 additional video skills](skills/README.md#additional-video-skills) | Keep the full content-vault skill coverage, including Shorts and Manim |
 | [Your personal-brand second brain](context/index.md) | Give your agent your positioning, audience, voice, stories and proof |
 | [Notion setup and public example](guides/notion.md) | Organize your pillars, topics, hooks and content board |
 | [OXYGEN Profile Watcher setup](guides/profile-watcher.md) | Bring people engaging with recent LinkedIn posts into one table |
 | [ICP qualification templates](guides/qualification.md) | Score company fit and person fit, with evidence and reasons |
 | [DM conversion framework](guides/dm-conversion.md) | Deliver the resource, understand the problem and agree on a next step |
+| [Content waterfall guide](guides/content-waterfall.md) · [Graphic](assets/content-waterfall@2x.png) · [Editable map](assets/content-waterfall.excalidraw) | Run the weekly system from idea to conversations in Claude Code |
 | [High-resolution flowchart](assets/linkedin-funnel.png) · [Animation](assets/linkedin-funnel.gif) · [Editable file](assets/linkedin-funnel.excalidraw) | See how the whole funnel connects |
 
-All skills are in the visible **[`skills/`](skills/)** folder. There are **33 in total**: 23 core skills, 6 additional video skills and 4 OXYGEN workflow helpers. The [catalog](skills/README.md) shows where every original content-vault skill lives.
+All skills are in the visible **[`skills/`](skills/)** folder. There are **43 in total**: 23 core skills, 10 content waterfall skills, 6 additional video skills and 4 OXYGEN workflow helpers. The [catalog](skills/README.md) shows where every original content-vault skill lives.
 
 ## Start here
 
@@ -74,11 +84,11 @@ Track qualified conversations, opportunities and signups alongside reach. That i
 ```text
 skills/       Content, branding, media and OXYGEN instructions
 context/      Your blank personal-brand and second-brain scaffold
-guides/       Notion, collection, qualification and DM setup
+guides/       Notion, collection, qualification, DM and content waterfall setup
 templates/    Editable ICP rubric, qualification prompt and output schema
 examples/     Synthetic qualification decisions to calibrate against
 company/      Example buyer rubrics; keep your own in company/private/
-assets/       High-resolution funnel, animation and editable Excalidraw
+assets/       Funnel and content waterfall graphics, animations and editable Excalidraw maps
 ```
 
 The scaffold starts blank. The [Adam Robinson webinar report and content example](https://github.com/OXYGEN-CRO/adam-robinson-content-engine) is there to show what a populated system can look like. Use your own biography, voice and proof when filling yours.

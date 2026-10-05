@@ -1,6 +1,6 @@
 {
   "source": "Tim Scheuer LinkedIn funnel graphic, 2026-09-17",
-  "scope": "Example diagram and editable source; headline is Tim\u2019s supplied example, not a performance guarantee.",
+  "scope": "Example diagram and editable source; headline is Tim\u2019s supplied example, not a performance guarantee. The content waterfall graphic (2026-10-05) shows Tim\u2019s own week and system; its headline is his result, not a performance guarantee.",
   "assets": [
     {
       "file": "linkedin-funnel.png",
@@ -16,6 +16,26 @@
       "file": "linkedin-funnel.excalidraw",
       "sha256": "471561a3442ce771f5aada581d0173fd35f07dd481e3031c4474319a8473212c",
       "source": "linkedin-funnel-v3.excalidraw"
+    },
+    {
+      "file": "content-waterfall.gif",
+      "sha256": "1e58d314b45e74be30c5a6a2cc0caa343442ac37eefa61953127e1db595a0d36",
+      "source": "Content waterfall lead magnet animation, 2026-10-05"
+    },
+    {
+      "file": "content-waterfall@2x.png",
+      "sha256": "780b62c71cc2da77daa9a6c751d9826cd674d2261d943ca6fb434c2a6216f9dd",
+      "source": "Content waterfall lead magnet still, 2026-10-05"
+    },
+    {
+      "file": "content-waterfall.excalidraw",
+      "sha256": "7f7546459f580f2cbdf3878a09b1771eada3b9a829a45a079d2834e9835c4140",
+      "source": "Content waterfall system map, 2026-10-04; proof and creator sections removed"
+    },
+    {
+      "file": "content-waterfall-map.png",
+      "sha256": "e9bb00be5c3e608f3b35029c5ed652f17f3dd2c175ddb19974c9d5d8e3a45dc5",
+      "source": "Render of content-waterfall.excalidraw"
     }
   ]
 }
