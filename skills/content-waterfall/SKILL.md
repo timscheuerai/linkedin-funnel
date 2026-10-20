@@ -33,6 +33,7 @@ Enter where the work is. A raw recording starts at stage 4 and a YouTube link at
 - Truth over packaging: every title, thumbnail and newsletter claim must be shown in the video. Numbers come only from `identity/proof.md`; drop planned numbers the video does not show.
 - Write in the author's voice (`voice/linkedin-voice.md`). When the author calls a line generic or AI-sounding, rewrite the section from their own words.
 - Link videos with the full `https://www.youtube.com/watch?v=<id>` URL. Never a shortener: link shorteners trip spam and phishing filters.
+- Every link to the author's own site carries UTM parameters: source = the platform (`linkedin`, `x`, `youtube`, `newsletter`), campaign = 1 short slug per waterfall, the same on every platform. Record the slug in the brief so signups can be traced back to the week.
 - 1 big post per waterfall with dated sub-posts, not a board full of separate cards. Every sub-post has a status, platform and date.
 - Date everything from the video's release day (D). The newsletter and the X Article go out on D; posts follow.
 - Text, image and graphic pieces carry the week. The video itself goes out only as the native upload of the finished video on LinkedIn and X.
@@ -56,11 +57,11 @@ Platform jobs: YouTube is the library, the newsletter the list you own, X the bu
 | Scan | Tools | What to bring back |
 |---|---|---|
 | Your signals | Last week's close: winners, the best questions from the comments, customer wins and calls | What already worked for this audience |
-| YouTube | The vidIQ plugin if installed (trend radar, video ideas), `youtube-thumbnail-outlier-research`, `youtube-title-outlier-packaging` | Outliers and rising topics in the niche, with their titles and thumbnails |
+| YouTube | `youtube-video-research` gate 1 (depth-first scan of the niche, gap probes), then the vidIQ plugin if installed | Scored ideas: a wave that is hot right now, applied to the outcome the audience buys, while the angle is still open |
 | X | X Radar (X Premium) on your keywords, X search, the viral lane of `x-planner` | Posts going viral in the niche |
 | LinkedIn | By hand: scroll the creators you follow, LinkedIn search, saved posts | Outlier posts, with their hooks |
 
-The slate: 3 to 5 ideas, each with its proof of heat (the outlier or the numbers), the pillar from `strategy/pillars.md`, the funnel job and the receipt the author can show on camera. Prefer ideas with more demand than supply. Content only about what the author finds interesting is the most common miss.
+The slate: 3 to 5 ideas, each with its proof of heat (the outlier or the numbers), the pillar from `strategy/pillars.md`, the funnel job and the receipt the author can show on camera. Only ideas that pass the `youtube-video-research` scorecard go on the slate as video candidates; the rest can still feed LinkedIn and X. Prefer ideas with more demand than supply. Content only about what the author finds interesting is the most common miss.
 
 ## Stage 1: Brief
 
@@ -68,8 +69,8 @@ The slate: 3 to 5 ideas, each with its proof of heat (the outlier or the numbers
 2. Stance check: read what the author published on the topic recently. The video builds on it or names the change.
 3. Facts: check every product, model or market claim at its source and date it.
 4. Worked example and resource: prefer what the author can show on screen and what already exists. The resource is usually an existing kit, not a new build.
-5. Packaging first: 2 titles (`youtube-title-outlier-packaging`) and 2 thumbnail directions (`youtube-thumbnail`) before the outline. The outline has to deliver that promise.
-6. Outline: chapters with what is on screen and which claim each makes deliverable. 1 chapter answers 1 buyer objection, so it can be sent as an answer in a DM later. Use `youtube-script` when a full script helps.
+5. Packaging first: 2 titles (`youtube-title-outlier-packaging`) and 2 thumbnail directions (`youtube-thumbnail`) before the outline, each structure validated outside the niche (`youtube-video-research` gate 2). The outline has to deliver that promise.
+6. Outline: the first 60 seconds scripted word for word (`youtube-video-research` gate 3), then chapters with what is on screen and which claim each makes deliverable. 1 chapter answers 1 buyer objection, so it can be sent as an answer in a DM later. Use `youtube-script` when a full script helps.
 7. Write the brief from `references/brief-template.md`.
 
 Ask the author only what they alone know: the release date and their verdict. Decide the rest and list it under open decisions.

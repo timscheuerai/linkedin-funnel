@@ -29,6 +29,10 @@ An outlier is a video doing far better than its own channel's normal. The fair c
 
 Filter by hand: drop live streams, videos under 4 minutes and off-audience topics; check the description for sponsorship; open the real thumbnail and note the text, face or UI and the 1 dominant promise. Keep the URLs. Shortlist 5 to 10 references.
 
+## Cross-niche validation
+
+Before a structure goes into an A/B pair, prove it outside the niche: `youtube-video-research` (gate 2) searches 4 to 6 donor niches and keeps a structure only with 3x outliers from 3 or more channels in 2 or more niches, and only if the author's niche has not worn it out.
+
 ## Title structures
 
 Borrow the shape, never the exact wording.

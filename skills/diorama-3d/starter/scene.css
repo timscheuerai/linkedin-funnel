@@ -1,0 +1,69 @@
+/* 3D diorama page (1080 x 1350). Set the author's palette and fonts from
+   context/brand/BRAND.md here; scene.js reads the --d-* colours, so the 3D matches the type. */
+:root {
+  --canvas: #F1F0EB; --ink: #1F2622; --ink-2: #5B635E; --accent: #18392A; --accent-soft: #E1EADB; --slab: #FCFBF8;
+  --font: "Inter", "Helvetica Neue", Arial, sans-serif; --serif: Georgia, "Times New Roman", serif;
+  --d-ink: var(--ink); --d-accent: var(--accent); --d-accent-soft: var(--accent-soft);
+  --d-slab: var(--slab); --d-raw: #C9CCC8; --d-steel: #3A4741; --d-belt: #2D3D35; --d-toy: #D97757;
+}
+body { margin: 0; background: var(--canvas); }
+.pb-art { position: relative; width: 1080px; height: 1350px; overflow: hidden; background: var(--canvas); -webkit-font-smoothing: antialiased; color: var(--ink); font-family: var(--font); }
+.pb-art p, .pb-art h1 { margin: 0; }
+
+/* Header */
+.hero { position: absolute; left: 56px; top: 46px; right: 56px; }
+.eyebrow { font-size: 22px; font-weight: 600; letter-spacing: -.015em; color: var(--accent); }
+.hero h1 { margin-top: 18px; font-size: 76px; font-weight: 600; line-height: 1; letter-spacing: -.055em; white-space: nowrap; }
+.mark {
+  font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1.2em; letter-spacing: -.015em;
+  -webkit-text-stroke: 1.1px currentColor; paint-order: stroke fill;
+  background: var(--accent-soft); padding: 0 .16em .02em .12em; border-radius: .14em; margin-left: .04em;
+}
+.sub { margin-top: 20px !important; font-size: 27px; white-space: nowrap; font-weight: 500; line-height: 1.3; letter-spacing: -.02em; color: var(--ink-2); }
+
+/* 3D stage: the three.js canvas with HTML labels projected from the scene */
+.stage { position: absolute; left: 0; top: 250px; width: 1080px; height: 830px; }
+.stage canvas { position: absolute; inset: 0; width: 1080px !important; height: 830px !important; }
+.labels { position: absolute; inset: 0; pointer-events: none; }
+.lbl { position: absolute; white-space: nowrap; }
+.a-bottom { transform: translate(-50%, -100%); }
+.a-top { transform: translate(-50%, 0); }
+.a-left { transform: translate(0, -50%); }
+.a-right { transform: translate(-100%, -50%); }
+.leaders { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.leaders line { stroke: var(--accent); stroke-opacity: .55; stroke-width: 1.6; }
+.leaders circle { fill: var(--accent); }
+
+/* Station card: number, name, up to 3 actionable lines */
+.station { display: flex; align-items: flex-start; gap: 10px; padding: 10px 16px 11px 10px; border-radius: 16px; background: var(--accent); box-shadow: 0 14px 26px -14px rgb(24 57 42 / 70%); }
+.station i { width: 30px; height: 30px; flex: none; display: grid; place-items: center; border-radius: 9px; background: var(--accent-soft); color: var(--accent); font-style: normal; font-size: 17px; font-weight: 800; }
+.station div { display: flex; flex-direction: column; }
+.station b { font-size: 20px; font-weight: 700; letter-spacing: -.025em; line-height: 1.1; color: #fff; margin-top: 4px; }
+.station ul { margin: 7px 0 0; padding: 0; list-style: none; }
+.station li { position: relative; padding-left: 12px; font-size: 14px; font-weight: 500; line-height: 1.35; color: rgb(255 255 255 / 82%); }
+.station li::before { content: ""; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 1px; background: var(--accent-soft); }
+
+/* Small tags and signs */
+.tag { padding: 4px 10px; border-radius: 999px; line-height: 1.1; background: rgb(255 255 255 / 90%); box-shadow: 0 0 0 1px rgb(24 57 42 / 10%), 0 6px 14px -8px rgb(24 57 42 / 45%); font-size: 15px; font-weight: 700; letter-spacing: -.02em; color: var(--ink); }
+.sign { display: flex; align-items: center; gap: 7px; height: 32px; padding: 0 14px; border-radius: 999px; background: var(--accent-soft); box-shadow: inset 0 0 0 1.5px rgb(24 57 42 / 28%), 0 8px 18px -10px rgb(24 57 42 / 50%); font-size: 16px; font-weight: 500; color: var(--accent); }
+.plate { padding: 4px 8px 5px; border-radius: 8px; text-align: center; line-height: 1.1; background: var(--accent); color: #fff; font-size: 13px; font-weight: 650; box-shadow: 0 6px 12px -6px rgb(24 57 42 / 60%); }
+
+/* Call to action: 2 steps (connect, then comment the keyword) */
+.cta { position: absolute; left: 40px; top: 1092px; width: 1000px; height: 228px; box-sizing: border-box; padding: 20px 26px 24px; border-radius: 34px; background: var(--accent); box-shadow: 0 24px 48px -24px rgb(24 57 42 / 60%); }
+.cta-head { font-size: 21px; font-weight: 600; letter-spacing: -.015em; color: rgb(255 255 255 / 78%); margin: 0 0 12px 4px !important; }
+.steps { display: flex; align-items: center; gap: 14px; }
+.step { flex: 1; height: 140px; box-sizing: border-box; padding: 16px 20px; border-radius: 24px; background: rgb(255 255 255 / 8%); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 16%); display: flex; flex-direction: column; justify-content: space-between; }
+.step-t { display: flex; align-items: center; gap: 12px; font-size: 34px; font-weight: 700; letter-spacing: -.04em; color: #fff; line-height: 1; }
+.step-t i { width: 38px; height: 38px; flex: none; display: grid; place-items: center; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-style: normal; font-size: 21px; font-weight: 800; }
+.step-b { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.who { display: flex; align-items: center; gap: 10px; }
+.who img, .avatar { width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 0 0 2px rgb(255 255 255 / 60%); }
+.who p { display: flex; flex-direction: column; }
+.who b { font-size: 18px; font-weight: 650; color: #fff; letter-spacing: -.02em; }
+.who span { font-size: 13px; color: rgb(255 255 255 / 65%); }
+.btn { display: flex; align-items: center; gap: 7px; height: 46px; padding: 0 20px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 20px; font-weight: 750; }
+.btn svg { width: 19px; height: 19px; fill: none; stroke: var(--accent); stroke-width: 2.6; stroke-linecap: round; }
+.word { padding: 2px 14px 4px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-size: 46px; font-weight: 800; letter-spacing: -.03em; line-height: 1.05; }
+.dm { font-size: 17px; font-weight: 550; color: rgb(255 255 255 / 75%); text-align: right; line-height: 1.2; }
+.arrow { width: 30px; height: 30px; flex: none; fill: none; stroke: var(--accent-soft); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.who .avatar { display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-size: 18px; font-weight: 800; }

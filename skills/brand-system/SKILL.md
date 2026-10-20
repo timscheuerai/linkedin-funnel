@@ -24,8 +24,10 @@ For an existing system, inspect affected consumers before editing. A request for
 
 Update the guide, relevant tokens and consumers together within the requested scope. Never install branded example assets as defaults in the blank template. Keep product screenshots faithful to the real product.
 
+When the brand or the design skills change, check every consumer: `graphics-designer`, `flowchart`, `brand-review` and this skill, including helper scripts, actual font loading and discovery metadata, not only the prose. A renamed font in the instructions is not a finished migration while a renderer still loads the old file. Record where a borrowed design idea came from; inspiration from another skill must not install a competing identity.
+
 ## Verify and hand off
 
-Use the project's actual checks and renderer if available. Otherwise validate new artifacts with the tools used to build them. Inspect representative layouts for font loading, contrast, clipping and asset portability. Do not claim a build or visual check that was not run.
+Use the project's actual checks and renderer if available. Otherwise validate new artifacts with the tools used to build them. For skill-only changes, validate the affected skill folders and links without regenerating the brand files; if a rendering helper changed, export a small representative scene in a temporary folder and inspect it. Inspect representative layouts for font loading, contrast, clipping and asset portability. Do not claim a build or visual check that was not run.
 
 Update Source Notes, `index.md` and `log.md` for durable decisions. Return the authoritative files, adoption status and any unfinished migration.

@@ -1,0 +1,392 @@
+<title>LinkedIn Comment Queue</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: 1 column of posts as they look on LinkedIn, each with the author's comment under it. Calm neutral palette; swap in the author's brand tokens from context/brand/ when they exist. */
+:root {
+  --bg: #fafafa; --card: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #e5e5e8;
+  --field: #f3f3f5; --accent: #1d1d1f; --accent-ink: #ffffff; --signal: #2f6b3a; --warn: #8a5a12;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141416; --card: #1c1c1f; --ink: #f2f2f4; --muted: #a1a1a8; --line: #2c2c31;
+    --field: #232327; --accent: #f2f2f4; --accent-ink: #141416; --signal: #9fd3a9; --warn: #e9c98a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141416; --card: #1c1c1f; --ink: #f2f2f4; --muted: #a1a1a8; --line: #2c2c31;
+  --field: #232327; --accent: #f2f2f4; --accent-ink: #141416; --signal: #9fd3a9; --warn: #e9c98a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 600px; margin: 0 auto; padding-block: 0 80px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 18px 0; }
+.bar-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+h1 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+.progress { font-family: var(--mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.track { height: 2px; background: var(--line); margin-top: 14px; }
+.fill { height: 100%; width: 0; background: var(--signal); transition: width .25s ease; }
+.lede { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+
+h2 { margin: 28px 0 12px; font-size: 13px; font-weight: 500; color: var(--muted); }
+.list { display: flex; flex-direction: column; gap: 16px; }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; min-width: 0; }
+.post { padding: 14px 16px 12px; min-width: 0; }
+.who { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 0 10px; align-items: start; }
+.avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--field); object-fit: cover; display: block; }
+.avatar.blank { display: grid; place-items: center; font-weight: 600; color: var(--muted); }
+.meta { min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.name { font-weight: 600; font-size: 14px; color: var(--ink); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.name:hover { text-decoration: underline; }
+.headline { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sub { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.sub .fresh { color: var(--signal); font-weight: 500; }
+.context { margin: 0 0 10px; font-size: 12px; color: var(--muted); padding-bottom: 8px; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.text { margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; }
+.text.clamped { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+.more { background: none; border: 0; padding: 2px 0 0; color: var(--muted); font: inherit; font-size: 13px; cursor: pointer; }
+.more:hover { color: var(--ink); text-decoration: underline; }
+.media { margin: 10px -16px 0; display: grid; gap: 2px; background: var(--field); }
+.media.n2, .media.n3, .media.n4 { grid-template-columns: 1fr 1fr; }
+.media img { display: block; width: 100%; max-width: 100%; height: 100%; max-height: 460px; object-fit: cover; }
+.media.n1 img { height: auto; object-fit: contain; }
+.kind { margin-top: 10px; display: inline-block; font-family: var(--mono); font-size: 11px; color: var(--muted);
+  border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; }
+.stats { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.open { margin-left: auto; color: var(--muted); text-decoration: none; }
+.open:hover { color: var(--ink); text-decoration: underline; }
+
+.reply { border-top: 1px solid var(--line); padding: 12px 16px 14px; display: flex; flex-direction: column; gap: 10px; }
+textarea { width: 100%; resize: none; overflow: hidden; font: inherit; font-size: 15px; line-height: 1.45; color: var(--ink);
+  background: var(--field); border: 1px solid transparent; border-radius: 10px; padding: 10px 12px; min-height: 44px; }
+textarea:focus { border-color: var(--line); outline: none; }
+textarea:focus-visible, .btn:focus-visible, .more:focus-visible, .link:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+.actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.count { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-right: auto; font-variant-numeric: tabular-nums; }
+.count.over { color: var(--warn); }
+.btn { font: inherit; font-size: 14px; font-weight: 500; border-radius: 999px; padding: 7px 16px; cursor: pointer; line-height: 1.2;
+  border: 1px solid var(--line); background: transparent; color: var(--ink); text-decoration: none; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.link { background: none; border: 0; font: inherit; font-size: 13px; color: var(--muted); cursor: pointer; padding: 4px 6px; }
+.link:hover { color: var(--ink); }
+.hint { margin: -4px 0 0; font-size: 12px; color: var(--muted); }
+.ref { margin: -4px 0 0; font-size: 12px; line-height: 1.4; color: var(--muted); overflow-wrap: anywhere; }
+.ref b { font-weight: 500; color: var(--ink); }
+.hint[hidden] { display: none; }
+.variant { display: flex; flex-direction: column; gap: 8px; border-radius: 12px; }
+.variant.multi { border: 1px solid var(--line); padding: 10px 10px 10px; }
+.variant.multi.selected { border-color: var(--signal); box-shadow: 0 0 0 1px var(--signal); }
+.variant.multi textarea { background: transparent; padding: 2px 2px; min-height: 30px; }
+.variant-label { font-family: var(--mono); font-size: 11px; color: var(--muted); padding: 0 2px; }
+.variant.selected .variant-label { color: var(--signal); }
+.actions.foot { justify-content: flex-end; }
+.variant-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.variant .actions { justify-content: flex-end; }
+.variant-head .count { margin-right: 0; }
+.reasons { display: flex; flex-wrap: wrap; gap: 6px; }
+.reasons[hidden] { display: none; }
+.reason { font: inherit; font-size: 13px; border-radius: 999px; padding: 5px 12px; cursor: pointer; line-height: 1.2;
+  border: 1px solid var(--line); background: var(--field); color: var(--ink); }
+.reason:focus-visible, .variant-label:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+.sync { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+
+.slim { display: none; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; color: var(--muted); min-width: 0; }
+.slim .avatar { width: 24px; height: 24px; font-size: 11px; }
+.slim .who-slim { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.card.is-done .post, .card.is-done .reply, .card.is-skip .post, .card.is-skip .reply { display: none; }
+.card.is-done .slim, .card.is-skip .slim { display: flex; }
+.chip { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--field); color: var(--ink); flex: none; }
+.slim .link { margin-left: auto; flex: none; }
+
+.empty { margin: 0; padding: 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 12px; }
+footer { margin-top: 32px; font-size: 12px; color: var(--muted); text-align: center; }
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <div class="bar-row">
+      <h1>LinkedIn comments</h1>
+      <span class="progress" id="progress">0 / 0</span>
+    </div>
+    <div class="track" aria-hidden="true"><div class="fill" id="fill"></div></div>
+  </div>
+  <p class="lede" id="lede"></p>
+  <p class="sync" id="sync"></p>
+
+  <section id="mine-section" hidden>
+    <h2>Answer on your posts</h2>
+    <div class="list" id="mine"></div>
+  </section>
+
+  <section>
+    <h2 id="items-title">Comment on these</h2>
+    <div class="list" id="items"></div>
+  </section>
+
+  <footer>Drafted from your second brain. Nothing goes out until you post it on LinkedIn yourself.</footer>
+  <!-- The page saves 1 document per card in its db collection `feedback` (scripts/page_feedback.py reads them back). -->
+</div>
+
+<script type="application/json" id="queue-data">/*QUEUE_DATA*/</script>
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById("queue-data").textContent);
+  var KEY = "lq:" + data.run_id + ":";
+  function get(k) { try { return localStorage.getItem(KEY + k); } catch (e) { return null; } }
+  function set(k, v) { try { if (v === null) localStorage.removeItem(KEY + k); else localStorage.setItem(KEY + k, v); } catch (e) {} }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function mins(iso) { return Math.max(0, Math.round((Date.now() - Date.parse(iso)) / 60000)); }
+  function ago(iso) {
+    if (!iso) return "";
+    var m = mins(iso);
+    if (m < 60) return m + "m";
+    var h = Math.floor(m / 60);
+    return h < 24 ? h + "h" : Math.floor(h / 24) + "d";
+  }
+  function k(n) { return n == null ? "" : n >= 1000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1).replace(/\.0$/, "") + "k" : String(n); }
+  function words(s) { var m = s.trim().match(/\S+/g); return m ? m.length : 0; }
+  function avatar(item) {
+    if (item.avatar_data) { var i = el("img", "avatar"); i.src = item.avatar_data; i.alt = ""; return i; }
+    return el("div", "avatar blank", (item.name || item.author || "?").replace(/^[^A-Za-z]+/, "").charAt(0).toUpperCase() || "?");
+  }
+  // Edits and done or skip marks belong to 1 version of a draft: a rewritten draft shows up fresh.
+  function vkey(item, vs) {
+    var h = 5381, d = vs.map(function (v) { return v.text || ""; }).join("\u0001");
+    for (var i = 0; i < d.length; i++) h = ((h << 5) + h + d.charCodeAt(i)) | 0;
+    return item.id + ":" + (h >>> 0).toString(36);
+  }
+  var DB = { ref: null, failed: function (e) {
+    note(e && e.code === "invalid_argument" ? "Picks could not be saved (read only for you). They stay in this browser." :
+      "A pick could not be saved just now. It stays in this browser.");
+  } };
+  var cardsById = {};
+  function note(t) { document.getElementById("sync").textContent = t; }
+  function profileUrl(item) { return item.author_url || ("https://www.linkedin.com/in/" + item.author + "/"); }
+
+  var cards = [];
+  function render(item, host, mine) {
+    var card = el("article", "card");
+    var post = el("div", "post");
+
+    if (mine && item.on_post) {
+      var by = item.on_post.is_mine ? "your post" : (item.on_post.author || "a post") + "'s post about you";
+      post.appendChild(el("p", "context", "On " + by + ": " + (item.on_post.text || "").split("\n")[0].slice(0, 90)));
+    }
+
+    var who = el("div", "who");
+    who.appendChild(avatar(item));
+    var meta = el("div", "meta");
+    var name = el("a", "name", item.name || item.author); name.href = profileUrl(item); name.target = "_blank"; name.rel = "noopener";
+    meta.appendChild(name);
+    if (item.headline) meta.appendChild(el("span", "headline", item.headline));
+    var sub = el("span", "sub");
+    var age = el("span", item.created_at && mins(item.created_at) <= 90 ? "fresh" : null, ago(item.created_at));
+    sub.appendChild(age);
+    if (item.followers != null) sub.appendChild(document.createTextNode(" · " + k(item.followers) + " followers"));
+    meta.appendChild(sub);
+    who.appendChild(meta);
+    post.appendChild(who);
+
+    var text = el("p", "text", item.text); post.appendChild(text);
+    if (item.text && (item.text.length > 300 || item.text.split("\n").length > 6)) {
+      text.classList.add("clamped");
+      var more = el("button", "more", "…more"); more.type = "button";
+      more.onclick = function () { var c = text.classList.toggle("clamped"); more.textContent = c ? "…more" : "Show less"; };
+      post.appendChild(more);
+    }
+    var media = (item.media || []).filter(function (m) { return m.data; });
+    if (media.length) {
+      var box = el("div", "media n" + Math.min(media.length, 4));
+      media.slice(0, 4).forEach(function (m) { var img = el("img"); img.src = m.data; img.alt = ""; img.loading = "lazy"; box.appendChild(img); });
+      post.appendChild(box);
+    } else {
+      var kinds = (item.media || []).map(function (m) { return m.type; });
+      var kind = kinds.indexOf("video") >= 0 ? "Video" : kinds.indexOf("document") >= 0 ? "Carousel" : kinds.indexOf("image") >= 0 ? "Image" : null;
+      if (kind) post.appendChild(el("span", "kind", kind + " on LinkedIn"));
+    }
+    var mt = item.metrics || {};
+    var stats = el("div", "stats");
+    if (!mine) {
+      stats.appendChild(el("span", null, k(mt.reactions || 0) + " reactions"));
+      stats.appendChild(el("span", null, k(mt.comments || 0) + " comments"));
+      if (mt.reposts) stats.appendChild(el("span", null, k(mt.reposts) + " reposts"));
+    }
+    var open = el("a", "open", "Open on LinkedIn"); open.href = item.url; open.target = "_blank"; open.rel = "noopener";
+    stats.appendChild(open);
+    post.appendChild(stats);
+
+    var reply = el("div", "reply");
+    // Tuning rounds carry 2 drafts per post (`drafts`). Each draft has its own Copy & open:
+    // 1 tap picks it, copies it and opens the post (1 tap does it all).
+    var vs = item.drafts && item.drafts.length ? item.drafts :
+      [{ text: item.draft || "", move: item.move || null, label: null, ref: item.ref, ref_source: item.ref_source }];
+    var multi = vs.length > 1;
+    var vk = vkey(item, vs);
+    var sel = null;
+    var boxes = [];
+    var hint = el("p", "hint", mine ? "Copied. Find " + (item.name || "their").split(" ")[0] + "'s comment, tap Reply and paste." : "Copied. Paste it as a comment on the post.");
+    hint.hidden = true;
+    vs.forEach(function (v, n) {
+      var box = el("div", "variant" + (multi ? " multi" : ""));
+      var count = el("span", "count");
+      if (multi) {
+        var head = el("div", "variant-head");
+        head.appendChild(el("span", "variant-label", "ABCD".charAt(n) + " · " + (v.label || v.move || "Draft")));
+        head.appendChild(count);
+        box.appendChild(head);
+      }
+      var ta = el("textarea"); ta.id = "draft-" + String(item.id).replace(/[^A-Za-z0-9_-]/g, "_") + "-" + n; ta.rows = 1;
+      ta.setAttribute("aria-label", "Comment " + (multi ? "ABCD".charAt(n) + " " : "") + "on " + (item.name || item.author));
+      ta.value = get("text:" + vk + ":" + n) || v.text || "";
+      box.appendChild(ta);
+      if (v.ref) {
+        var ref = el("p", "ref"); ref.appendChild(el("b", null, "From your second brain: "));
+        ref.appendChild(document.createTextNode(v.ref + (v.ref_source ? " (" + v.ref_source + ")" : "")));
+        box.appendChild(ref);
+      }
+      var row = el("div", "actions");
+      if (!multi) row.appendChild(count);
+      var copy = el("button", "btn", "Copy"); copy.type = "button"; row.appendChild(copy);
+      var send = el("a", "btn primary", "Copy & open"); send.href = item.url; send.target = "_blank"; send.rel = "noopener"; row.appendChild(send);
+      box.appendChild(row);
+      var b = { box: box, ta: ta, v: v, count: count };
+      boxes.push(b);
+      ta.addEventListener("input", function () { set("text:" + vk + ":" + n, ta.value === v.text ? null : ta.value); sync(b); });
+      copy.onclick = function () {
+        take(n);
+        toClipboard(ta, function () { copy.textContent = "Copied"; setTimeout(function () { copy.textContent = "Copy"; }, 1400); });
+        if (state !== "done") store("copied");
+      };
+      send.addEventListener("click", function () {
+        take(n);
+        toClipboard(ta, function () { hint.hidden = false; });
+        setTimeout(function () { mark("done", null, true); }, 600);
+      });
+      reply.appendChild(box);
+    });
+    var foot = el("div", "actions foot");
+    var skip = el("button", "link", "Skip"); skip.type = "button"; foot.appendChild(skip);
+    reply.appendChild(foot);
+    var reasons = el("div", "reasons"); reasons.hidden = true;
+    ["Not my topic", "Too long", "Not how I talk", "Wrong angle", "Already said", "Post too old", "No reason"].forEach(function (r) {
+      var b = el("button", "reason", r); b.type = "button";
+      b.onclick = function () { reasons.hidden = true; mark("skip", r === "No reason" ? null : r, true); };
+      reasons.appendChild(b);
+    });
+    reply.appendChild(reasons);
+    reply.appendChild(hint);
+
+    var slim = el("div", "slim");
+    slim.appendChild(avatar(item));
+    var chip = el("span", "chip"); slim.appendChild(chip);
+    slim.appendChild(el("span", "who-slim", item.name || item.author));
+    var undo = el("button", "link", "Undo"); undo.type = "button"; slim.appendChild(undo);
+
+    function grow(ta) { ta.style.height = "auto"; ta.style.height = ta.scrollHeight + "px"; }
+    function sync(b) {
+      var t = b.ta.value, n = t.length, w = words(t);
+      b.count.textContent = w + " words · " + n;
+      b.count.classList.toggle("over", mine ? n > 300 : (n > 450 || w < 6));
+      grow(b.ta);
+    }
+    function take(n) {
+      sel = n; set("pick:" + vk, multi ? String(n) : null);
+      boxes.forEach(function (b, k) { b.box.classList.toggle("selected", multi && k === n); });
+    }
+    var state = null, reason = null;
+    function mark(s, r, save) {
+      state = s; reason = r || null;
+      set("state:" + vk, s); set("reason:" + vk, reason);
+      card.classList.toggle("is-done", s === "done"); card.classList.toggle("is-skip", s === "skip");
+      chip.textContent = s === "done" ? (mine ? "Answered" : "Commented") + (multi && sel !== null ? " (" + "ABCD".charAt(sel) + ")" : "") :
+        "Skipped" + (reason ? " · " + reason : "");
+      progress();
+      if (save) store(s === "done" ? "opened" : s === "skip" ? "skipped" : null);
+    }
+    // 1 document per card in the page's database: the record the next run learns from.
+    var docId = (String(data.run_id) + "~" + String(item.id)).replace(/[^A-Za-z0-9_\-.~:@+]/g, "_");
+    var chain = Promise.resolve();
+    function store(s) {
+      if (!DB.ref) return;
+      var took = (s === "copied" || s === "opened") && sel !== null, b = boxes[sel === null ? 0 : sel];
+      var norm = function (t) { return (t || "").replace(/\s+/g, " ").trim(); };
+      var body = {
+        run_id: String(data.run_id), item_id: String(item.id), author: item.author || null, name: item.name || null, post_url: item.url || null,
+        variants: vs.map(function (v) { return { move: v.move || null, label: v.label || null, text: v.text || "" }; }),
+        picked: took ? sel : null, draft: took ? b.v.text || "" : null, final: took ? b.ta.value : null,
+        edited: took ? norm(b.ta.value) !== norm(b.v.text) : false, state: s, skip_reason: s === "skipped" ? reason : null,
+        updated_at: new Date().toISOString()
+      };
+      chain = chain.then(function () {
+        return DB.ref.collection("feedback").doc(docId).set(body).catch(function (e) {
+          if (e && e.code === "unavailable") return new Promise(function (ok) { setTimeout(ok, 800 + Math.random() * 800); })
+            .then(function () { return DB.ref.collection("feedback").doc(docId).set(body); });
+          throw e;
+        });
+      }).catch(function (e) { DB.failed(e); });
+    }
+    function remote(d) {
+      if (d.picked != null && d.picked < boxes.length) {
+        take(d.picked);
+        var b = boxes[d.picked];
+        if (d.final && document.activeElement !== b.ta && b.ta.value !== d.final) { b.ta.value = d.final; sync(b); }
+      }
+      var s = d.state === "opened" ? "done" : d.state === "skipped" ? "skip" : null;
+      if (s !== state && d.state !== "copied") mark(s, d.skip_reason, false);
+    }
+    cardsById[String(item.id)] = remote;
+
+    function toClipboard(ta, done) {
+      var fallback = function () { ta.focus(); ta.select(); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ta.value).then(done, fallback);
+      else fallback();
+    }
+    skip.onclick = function () { reasons.hidden = !reasons.hidden; };
+    undo.onclick = function () { hint.hidden = true; reasons.hidden = true; mark(null, null, true); };
+
+    card.appendChild(post); card.appendChild(reply); card.appendChild(slim);
+    host.appendChild(card); cards.push(card);
+    var p0 = get("pick:" + vk);
+    if (p0 !== null && +p0 < boxes.length) take(+p0);
+    boxes.forEach(sync);
+    var s0 = get("state:" + vk);
+    if (s0) mark(s0, get("reason:" + vk), false); else progress();
+    requestAnimationFrame(function () { boxes.forEach(function (b) { grow(b.ta); }); });
+  }
+
+  function progress() {
+    var total = cards.length;
+    var finished = cards.filter(function (c) { return c.classList.contains("is-done") || c.classList.contains("is-skip"); }).length;
+    document.getElementById("progress").textContent = finished + " / " + total;
+    document.getElementById("fill").style.width = (total ? finished / total * 100 : 0) + "%";
+  }
+
+  var mine = data.on_my_posts || [], items = data.items || [];
+  if (mine.length) { document.getElementById("mine-section").hidden = false; mine.forEach(function (it) { render(it, document.getElementById("mine"), true); }); }
+  items.forEach(function (it) { render(it, document.getElementById("items"), false); });
+  if (!items.length) document.getElementById("items").appendChild(el("p", "empty", "Nothing fresh worth a comment right now. Check back in a few hours."));
+  var when = new Date(data.refreshed_at || data.fetched_at);
+  document.getElementById("lede").textContent = items.length + " comments" + (mine.length ? " and " + mine.length + " answers" : "") +
+    ", freshest first. Updated " + when.toLocaleString([], { weekday: "short", hour: "2-digit", minute: "2-digit" }) + ".";
+  window.addEventListener("resize", function () { document.querySelectorAll("textarea").forEach(function (t) { t.style.height = "auto"; t.style.height = t.scrollHeight + "px"; }); });
+  progress();
+
+  var multiRun = items.some(function (it) { return it.drafts && it.drafts.length > 1; });
+  note(multiRun ? "2 drafts per post: Copy & open the one you'd post." : "");
+  var use = window.claude && window.claude.use ? window.claude.use("db") : Promise.resolve(null);
+  use.then(function (db) {
+    if (!db) { note((multiRun ? "2 drafts per post: Copy & open the one you'd post. " : "") + "Your picks are saved in this browser only."); return; }
+    DB.ref = db;
+    note((multiRun ? "2 drafts per post: Copy & open the one you'd post. " : "") + "Your picks, edits and skip reasons train the next round.");
+    db.collection("feedback").where("run_id", "==", String(data.run_id)).onSnapshot(function (snap) {
+      snap.docs.forEach(function (d) { var body = d.data(); var fn = body && cardsById[String(body.item_id)]; if (fn) fn(body); });
+    }, function () { note("Your picks are saved in this browser only right now."); });
+  }, function () { note("Your picks are saved in this browser only."); });
+})();
+</script>

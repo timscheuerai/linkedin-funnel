@@ -1,0 +1,31 @@
+/* Silver chrome title text for a big word or two over a face frame.
+   Spec and usage: ../references/silver-text-treatment.md.
+   Load a bold neo-grotesque and point --silver-font at it (Geist 700 matches the measured
+   proportions). The gradient stops 14.5% and 85.5% land on the cap top and baseline only
+   with Geist-like metrics, line-height 1 and no vertical padding. */
+.silver-text {
+  display: inline-block;
+  /* Negative tracking ends the box inside the last letter and background-clip would slice it.
+     The padding brings the box back to the ink edge. */
+  padding-right: 0.08em;
+  font-family: var(--silver-font, Geist), sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.075em;
+  white-space: nowrap;
+  color: transparent;
+  /* Chrome: pure white to cool steel */
+  background: linear-gradient(180deg, var(--silver-top, #FFFFFF) 14.5%, var(--silver-bottom, #B3B9C2) 85.5%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* A tight contact shadow for a crisp edge, then 1 soft black shadow (about 24 px blur, 4 px drop
+     at 210 px). 60% keeps it from looking heavy; the measured reference uses 100%. */
+  filter: drop-shadow(0 0.01em 0.015em rgba(0, 0, 0, 0.45)) drop-shadow(0 0.02em 0.115em rgba(0, 0, 0, 0.6));
+}
+
+/* The measured reference exactly: light to mid grey, the soft shadow only. */
+.silver-text--reference {
+  --silver-top: #F8F8F8;
+  --silver-bottom: #CFCFCF;
+  filter: drop-shadow(0 0.02em 0.115em #000);
+}

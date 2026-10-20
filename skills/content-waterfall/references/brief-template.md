@@ -22,6 +22,10 @@ The YouTube video goes live on YYYY-MM-DD and feeds <n> pieces, all dated from t
 
 <Only claims checked at the source, each with its source. Numbers outside identity/proof.md stay out.>
 
+## First 60 seconds
+
+<Word for word, from the hook template in youtube-video-research: the beats with what is on screen, 3 versions of the first sentence, the word count. Recorded as its own take.>
+
 ## Video outline
 
 <Length and format.> Titles, thumbnail and newsletter may only claim what these chapters show.

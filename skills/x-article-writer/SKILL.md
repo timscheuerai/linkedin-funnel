@@ -23,14 +23,18 @@ For a supplied X URL, read the actual post and any linked Article, including its
 - Follow the result with the mechanism: the tools, the order of operations, the decisions and the reasons. Keep the author's concrete details and first-person experience.
 - Make it personal through documented habits, mistakes and decisions, not by swapping "you" for "I".
 - Keep the author's own names for their frameworks and explain each the first time.
-- Prefer the shortest complete explanation. A section can be 2 sentences and a graphic. Do not pad to a word count.
+- Prefer the shortest complete explanation. A section can be 2 sentences and a graphic. Do not pad to a word count. When the author has hand-edited an earlier version, that edit sets the depth and pace.
+- State the action or belief directly, then the reason needed to understand it. Use short lists for concrete inputs, stages and routing choices.
+- Explain a failure through the missing input or decision the author names (for example the context an AI draft lacked), not through a vague "it needs something worth saying".
+- Keep each section on its named job. Do not restore examples, scripts or side topics the author cut just because they are relevant.
 - Separate what was demonstrated from what is proposed. Numbers come only from `identity/proof.md`; keep differing time windows separate.
 - Use a reference article for craft only: how it sets stakes and lets graphics carry information. Never import its anecdotes, numbers or distinctive lines.
 - Numerals, no em dashes, no hashtags, no generic AI phrases.
+- Links to the author's own site carry UTM parameters (source `x`, campaign = the waterfall's slug). Links to GitHub, YouTube and other sites stay clean.
 
 ## Graphics
 
-Place each graphic where it explains the next step of the argument. A caption must add information; omit it when the figure explains itself. Use `graphics-designer` or `flowchart` for new figures and keep the editable source. For the X handoff, export a cover and full-resolution inline images numbered in article order, with a short placement guide.
+Place each graphic where it explains the next step of the argument. A caption must add information; omit it when the figure explains itself. Pasted editor text such as "Provide a caption (optional)" is interface residue, not copy. Use `graphics-designer` or `flowchart` for new figures and keep the editable source. For the X handoff, export a cover and full-resolution inline images numbered in article order, with a short placement guide.
 
 ## The video post
 
@@ -39,5 +43,7 @@ When the waterfall needs the X post for a new video: 1 short line about the read
 ## Deliver
 
 Return the article, the title, the cover and the inline graphics with their positions, plus any unresolved facts. Drafting does not authorize publishing or scheduling. If a scheduler does not support native Articles, hand over the draft and assets for the native X editor and say so.
+
+When asked to learn from a finished piece, compare the author's final hand edit with the preceding draft and record what they added, cut and renamed as reusable rules. Their final choices on length, examples, headings and tone win over earlier drafts. Learning from a piece does not by itself ask for another rewrite or for publication.
 
 Review before returning: does the title promise something useful, does the opening carry the strongest supported result, would the author recognise their reasoning, can a reader scan it and act, and do text, figures and links describe the same system?

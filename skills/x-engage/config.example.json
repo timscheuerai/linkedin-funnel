@@ -1,0 +1,27 @@
+{
+  "_help": "Copy to .oxygen/x-engage.json at the kit root (git-ignored) and fill it. Names and IDs only, never credentials. Field notes are in SKILL.md, section Config.",
+  "oxygen_profile": null,
+  "oxygen_org": null,
+  "x_handle": "YOUR_HANDLE",
+  "watchlist_table": "YOUR-WATCHLIST-TABLE-ID",
+  "runs_dir": "context/research/engage/x",
+  "page_url": null,
+  "x_toolkit": "twitter",
+  "x_search_action": "TWITTER_RECENT_SEARCH",
+  "x_lookup_action": "TWITTER_POST_LOOKUP_BY_POST_IDS",
+  "lanes": {
+    "lane_one": "\\b(keyword|another keyword|third keyword)\\b",
+    "lane_two": "\\b(topic|other topic)\\b"
+  },
+  "focus_lanes": ["lane_one"],
+  "niche_terms": "\\b(term|other term|third term)\\b",
+  "keyword_queries": [
+    "(\"a phrase your niche uses\" OR \"another phrase\") -is:retweet -is:reply lang:en"
+  ],
+  "keyword_min_followers": 5000,
+  "focus_queries": [],
+  "focus_min_followers": 2000,
+  "company_name": null,
+  "extra_banned_words": [],
+  "taste_blocks": []
+}

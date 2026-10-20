@@ -9,6 +9,8 @@ Read the video's actual content, target viewer, title and `context/brand/BRAND.m
 
 Sketch a few distinct compositions, then choose the one that reads clearly at small size. Text should add information to the title, not repeat all of it. Do not invent result screenshots, endorsements or emotionally misleading scenes.
 
+For a big title over a face frame (the tool or topic name across the chest), the silver chrome text in [references/silver-text-treatment.md](references/silver-text-treatment.md) and `assets/silver-text.css` is a tested starting point.
+
 Use the available design/image tool and the actual brand rules. Verify current platform dimensions, file size and format requirements before claiming upload readiness. Keep editable source or the generation/edit brief with the export.
 
 Inspect the thumbnail at full and small sizes for readability, cropping, contrast and factual accuracy. Use `brand-review` for a requested independent visual review, without spawning agents unless authorized by the user/environment.

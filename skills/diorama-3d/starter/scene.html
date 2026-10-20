@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D diorama</title>
+  <link rel="stylesheet" href="scene.css">
+</head>
+<body>
+  <!-- data-build is the second each part arrives; "cta" arrives with B.cta in scene.js -->
+  <main class="pb-art" aria-label="Describe the whole graphic in 1 or 2 sentences: what the diorama shows, station by station, and the call to action.">
+    <header class="hero">
+      <p class="eyebrow" data-build="0">Eyebrow: the system or template name</p>
+      <h1 data-build="0.1">Headline with 1 <span class="mark">word</span></h1>
+      <p class="sub" data-build="0.2">1 line on what the reader gets.</p>
+    </header>
+    <section class="stage"><div class="labels"></div></section>
+    <!-- a real next action only; delete the band when the post has none -->
+    <section class="cta" data-build="cta">
+      <p class="cta-head">Get the full file in 2 steps</p>
+      <div class="steps">
+        <div class="step">
+          <p class="step-t"><i>1</i>Connect with me</p>
+          <div class="step-b">
+            <!-- swap the initials for the author's real photo: <img src="assets/author.jpg" alt="Author name"> -->
+            <div class="who"><span class="avatar">YN</span><p><b>Your Name</b><span>Your role, Company</span></p></div>
+            <span class="btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Connect</span>
+          </div>
+        </div>
+        <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        <div class="step">
+          <p class="step-t"><i>2</i>Comment</p>
+          <div class="step-b"><span class="word">KEYWORD</span><span class="dm">I'll DM you the file</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="scene.bundle.js"></script>
+</body>
+</html>

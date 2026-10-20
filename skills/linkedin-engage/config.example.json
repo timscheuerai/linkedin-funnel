@@ -1,0 +1,22 @@
+{
+  "_help": "Copy to .oxygen/linkedin-engage.json at the kit root (git-ignored) and fill it. Names and IDs only, never credentials. Field notes are in SKILL.md, section Config.",
+  "oxygen_profile": null,
+  "oxygen_org": null,
+  "my_profile_url": "https://www.linkedin.com/in/YOUR-HANDLE/",
+  "watchlist_table": "YOUR-WATCHLIST-TABLE-ID",
+  "runs_dir": "context/research/engage/linkedin",
+  "page_url": null,
+  "lanes": {
+    "lane_one": "\\b(keyword|another keyword|third keyword)\\b",
+    "lane_two": "\\b(topic|other topic)\\b"
+  },
+  "niche_searches": [
+    {"search": "a phrase your niche uses"},
+    {"any_keywords": ["term one", "term two"], "all_keywords": ["anchor term"]}
+  ],
+  "niche_min_reactions": 15,
+  "company_name": null,
+  "thousands_separator": ",",
+  "automated_comment_patterns": ["utm_source=linkedin"],
+  "extra_banned_words": []
+}

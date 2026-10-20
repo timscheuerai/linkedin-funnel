@@ -18,8 +18,10 @@ This is the shareable template behind my LinkedIn funnel. Make your own copy, ad
 
 | Included | What it helps you do |
 |---|---|
-| [23 core content and branding skills](skills/README.md#the-23-core-skills) | Research, write, repurpose and design content in your own voice |
-| [10 content waterfall skills](skills/README.md#content-waterfall-skills) | Turn 1 video a week into posts on every platform, then into conversations |
+| [26 core content and branding skills](skills/README.md#the-26-core-skills) | Research, write, repurpose and design content in your own voice |
+| [12 content waterfall skills](skills/README.md#content-waterfall-skills) | Turn 1 video a week into posts on every platform, then into conversations |
+| [2 engagement skills](skills/README.md#engagement-skills) | Comment and reply where you have a real receipt, from a 1-tap queue that learns your taste |
+| [3D diorama graphics](skills/diorama-3d/SKILL.md) | Tell your system as a 3D place, with a 2-second build-in, as a still, MP4 and GIF |
 | [6 additional video skills](skills/README.md#additional-video-skills) | Keep the full content-vault skill coverage, including Shorts and Manim |
 | [Your personal-brand second brain](context/index.md) | Give your agent your positioning, audience, voice, stories and proof |
 | [Notion setup and public example](guides/notion.md) | Organize your pillars, topics, hooks and content board |
@@ -29,7 +31,7 @@ This is the shareable template behind my LinkedIn funnel. Make your own copy, ad
 | [Content waterfall guide](guides/content-waterfall.md) · [Graphic](assets/content-waterfall@2x.png) · [Editable map](assets/content-waterfall.excalidraw) | Run the weekly system from idea to conversations in Claude Code |
 | [High-resolution flowchart](assets/linkedin-funnel.png) · [Animation](assets/linkedin-funnel.gif) · [Editable file](assets/linkedin-funnel.excalidraw) | See how the whole funnel connects |
 
-All skills are in the visible **[`skills/`](skills/)** folder. There are **43 in total**: 23 core skills, 10 content waterfall skills, 6 additional video skills and 4 OXYGEN workflow helpers. The [catalog](skills/README.md) shows where every original content-vault skill lives.
+All skills are in the visible **[`skills/`](skills/)** folder. There are **50 in total**: 26 core skills, 12 content waterfall skills, 2 engagement skills, 6 additional video skills and 4 OXYGEN workflow helpers. The [catalog](skills/README.md) shows where every original content-vault skill lives.
 
 ## Start here
 

@@ -1,0 +1,232 @@
+<title>X Reply Queue</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: 1 column of posts as they look on X, each with the author's reply under it. Calm neutral palette; swap in the author's brand tokens from context/brand/ when they exist. */
+:root {
+  --bg: #fafafa; --card: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #e5e5e8;
+  --field: #f3f3f5; --accent: #1d1d1f; --accent-ink: #ffffff; --signal: #2f6b3a; --warn: #8a5a12;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141416; --card: #1c1c1f; --ink: #f2f2f4; --muted: #a1a1a8; --line: #2c2c31;
+    --field: #232327; --accent: #f2f2f4; --accent-ink: #141416; --signal: #9fd3a9; --warn: #e9c98a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141416; --card: #1c1c1f; --ink: #f2f2f4; --muted: #a1a1a8; --line: #2c2c31;
+  --field: #232327; --accent: #f2f2f4; --accent-ink: #141416; --signal: #9fd3a9; --warn: #e9c98a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.45; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 600px; margin: 0 auto; padding-block: 0 80px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 18px 0; }
+.bar-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+h1 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+.progress { font-family: var(--mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.track { height: 2px; background: var(--line); margin-top: 14px; }
+.fill { height: 100%; width: 0; background: var(--signal); transition: width .25s ease; }
+.lede { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+
+h2 { margin: 28px 0 12px; font-size: 13px; font-weight: 500; color: var(--muted); }
+.list { display: flex; flex-direction: column; gap: 16px; }
+
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; min-width: 0; }
+.post { padding: 16px 16px 12px; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 0 12px; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--field); object-fit: cover; }
+.avatar.blank { display: grid; place-items: center; font-weight: 600; color: var(--muted); }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 6px; min-width: 0; font-size: 14px; }
+.name { font-weight: 600; color: var(--ink); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+.name:hover { text-decoration: underline; }
+.sub { color: var(--muted); }
+.text { margin: 4px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 15px; }
+.text.clamped { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+.more { background: none; border: 0; padding: 4px 0 0; color: var(--signal); font: inherit; font-size: 13px; cursor: pointer; }
+.media { margin-top: 10px; display: grid; gap: 4px; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+.media.n2, .media.n3, .media.n4 { grid-template-columns: 1fr 1fr; }
+.media img { display: block; width: 100%; max-width: 100%; height: 100%; max-height: 420px; object-fit: cover; background: var(--field); }
+.media.n1 img { height: auto; }
+.media .vid { position: relative; }
+.media .vid::after { content: "Video"; position: absolute; left: 8px; bottom: 8px; font-size: 11px; font-family: var(--mono);
+  background: rgba(0,0,0,.6); color: #fff; padding: 2px 6px; border-radius: 6px; }
+.stats { margin-top: 10px; display: flex; gap: 14px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.open { margin-left: auto; color: var(--muted); text-decoration: none; }
+.open:hover { color: var(--ink); text-decoration: underline; }
+
+.reply { border-top: 1px solid var(--line); padding: 12px 16px 14px; display: flex; flex-direction: column; gap: 10px; }
+textarea { width: 100%; resize: none; overflow: hidden; font: inherit; font-size: 15px; line-height: 1.45; color: var(--ink);
+  background: var(--field); border: 1px solid transparent; border-radius: 12px; padding: 10px 12px; min-height: 44px; }
+textarea:focus { border-color: var(--line); outline: none; }
+textarea:focus-visible, .btn:focus-visible, .more:focus-visible, .link:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+.actions { display: flex; align-items: center; gap: 8px; }
+.count { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-right: auto; font-variant-numeric: tabular-nums; }
+.count.over { color: var(--warn); }
+.btn { font: inherit; font-size: 14px; font-weight: 500; border-radius: 999px; padding: 7px 16px; cursor: pointer; line-height: 1.2;
+  border: 1px solid var(--line); background: transparent; color: var(--ink); text-decoration: none; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.link { background: none; border: 0; font: inherit; font-size: 13px; color: var(--muted); cursor: pointer; padding: 4px 6px; }
+.link:hover { color: var(--ink); }
+
+.slim { display: none; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; color: var(--muted); }
+.slim img, .slim .avatar { width: 24px; height: 24px; }
+.card.is-done .post, .card.is-done .reply, .card.is-skip .post, .card.is-skip .reply { display: none; }
+.card.is-done .slim, .card.is-skip .slim { display: flex; }
+.chip.circle { font-size: 11px; padding: 1px 8px; background: var(--field); color: var(--signal); border: 1px solid var(--line); }
+.chip { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: var(--field); color: var(--ink); }
+.slim .link { margin-left: auto; }
+
+.empty { margin: 0; padding: 20px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 16px; }
+footer { margin-top: 32px; font-size: 12px; color: var(--muted); text-align: center; }
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <div class="bar-row">
+      <h1>X replies</h1>
+      <span class="progress" id="progress">0 / 0</span>
+    </div>
+    <div class="track" aria-hidden="true"><div class="fill" id="fill"></div></div>
+  </div>
+  <p class="lede" id="lede"></p>
+
+  <section id="mine-section" hidden>
+    <h2>Replies on your posts</h2>
+    <div class="list" id="mine"></div>
+  </section>
+
+  <section>
+    <h2 id="items-title">Reply to these</h2>
+    <div class="list" id="items"></div>
+  </section>
+
+  <footer>Drafted from your second brain. Nothing goes out until you send it in X.</footer>
+</div>
+
+<script type="application/json" id="queue-data">/*QUEUE_DATA*/</script>
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById("queue-data").textContent);
+  var KEY = "xq:" + data.run_id + ":";
+  function get(k) { try { return localStorage.getItem(KEY + k); } catch (e) { return null; } }
+  function set(k, v) { try { if (v === null) localStorage.removeItem(KEY + k); else localStorage.setItem(KEY + k, v); } catch (e) {} }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function ago(iso) {
+    var m = Math.max(0, Math.round((Date.now() - Date.parse(iso)) / 60000));
+    if (m < 60) return m + "m";
+    var h = Math.floor(m / 60);
+    return h < 24 ? h + "h" : Math.floor(h / 24) + "d";
+  }
+  function k(n) { return n == null ? "" : n >= 1000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1).replace(/\.0$/, "") + "k" : String(n); }
+  function intent(id, text) { return "https://x.com/intent/post?in_reply_to=" + id + "&text=" + encodeURIComponent(text); }
+  function avatar(item, cls) {
+    if (item.avatar_data) { var i = el("img", cls || "avatar"); i.src = item.avatar_data; i.alt = ""; return i; }
+    return el("div", (cls || "avatar") + " blank", (item.author || "?").charAt(0).toUpperCase());
+  }
+
+  var cards = [];
+  function render(item, host) {
+    var card = el("article", "card");
+
+    var post = el("div", "post");
+    post.appendChild(avatar(item));
+    var main = el("div"); main.style.minWidth = "0";
+    var head = el("div", "head");
+    var name = el("a", "name", item.name || item.author); name.href = "https://x.com/" + item.author; name.target = "_blank"; name.rel = "noopener";
+    head.appendChild(name);
+    if (item.circle) head.appendChild(el("span", "chip circle", "Circle"));
+    head.appendChild(el("span", "sub", "@" + item.author + " · " + ago(item.created_at) + (item.followers != null ? " · " + k(item.followers) + " followers" : "")));
+    main.appendChild(head);
+
+    var text = el("p", "text", item.text); main.appendChild(text);
+    if (item.text && item.text.length > 360) {
+      text.classList.add("clamped");
+      var more = el("button", "more", "Show more"); more.type = "button";
+      more.onclick = function () { var c = text.classList.toggle("clamped"); more.textContent = c ? "Show more" : "Show less"; };
+      main.appendChild(more);
+    }
+    var media = (item.media || []).filter(function (m) { return m.data; });
+    if (media.length) {
+      var box = el("div", "media n" + Math.min(media.length, 4));
+      media.slice(0, 4).forEach(function (m) {
+        var wrap = el("div", m.type === "photo" ? "" : "vid");
+        var img = el("img"); img.src = m.data; img.alt = m.alt || ""; img.loading = "lazy";
+        wrap.appendChild(img); box.appendChild(wrap);
+      });
+      main.appendChild(box);
+    }
+    var mt = item.metrics || {};
+    var stats = el("div", "stats");
+    stats.appendChild(el("span", null, k(mt.like_count || 0) + " likes"));
+    stats.appendChild(el("span", null, k(mt.reply_count || 0) + " replies"));
+    var open = el("a", "open", "Open on X"); open.href = item.url; open.target = "_blank"; open.rel = "noopener";
+    stats.appendChild(open);
+    main.appendChild(stats);
+    post.appendChild(main);
+
+    var reply = el("div", "reply");
+    var ta = el("textarea"); ta.id = "draft-" + item.id; ta.rows = 1; ta.setAttribute("aria-label", "Your reply to @" + item.author);
+    ta.value = get("text:" + item.id) || item.draft || "";
+    reply.appendChild(ta);
+    var actions = el("div", "actions");
+    var count = el("span", "count"); actions.appendChild(count);
+    var skip = el("button", "link", "Skip"); skip.type = "button"; actions.appendChild(skip);
+    var copy = el("button", "btn", "Copy"); copy.type = "button"; actions.appendChild(copy);
+    var send = el("a", "btn primary", "Reply on X"); send.target = "_blank"; send.rel = "noopener"; actions.appendChild(send);
+    reply.appendChild(actions);
+
+    var slim = el("div", "slim");
+    slim.appendChild(avatar(item));
+    var chip = el("span", "chip"); slim.appendChild(chip);
+    slim.appendChild(el("span", null, "@" + item.author));
+    var undo = el("button", "link", "Undo"); undo.type = "button"; slim.appendChild(undo);
+
+    function grow() { ta.style.height = "auto"; ta.style.height = ta.scrollHeight + "px"; }
+    function sync() {
+      var n = ta.value.length; count.textContent = n; count.classList.toggle("over", n > 280);
+      send.href = intent(item.id, ta.value); grow();
+    }
+    function mark(s) {
+      set("state:" + item.id, s);
+      card.classList.toggle("is-done", s === "done"); card.classList.toggle("is-skip", s === "skip");
+      chip.textContent = s === "done" ? "Replied" : "Skipped";
+      progress();
+    }
+    ta.addEventListener("input", function () { set("text:" + item.id, ta.value === item.draft ? null : ta.value); sync(); });
+    copy.onclick = function () {
+      var ok = function () { copy.textContent = "Copied"; setTimeout(function () { copy.textContent = "Copy"; }, 1400); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ta.value).then(ok, function () { ta.select(); });
+      else ta.select();
+    };
+    send.addEventListener("click", function () { setTimeout(function () { mark("done"); }, 400); });
+    skip.onclick = function () { mark("skip"); };
+    undo.onclick = function () { mark(null); };
+
+    card.appendChild(post); card.appendChild(reply); card.appendChild(slim);
+    host.appendChild(card); cards.push(card);
+    sync(); mark(get("state:" + item.id));
+    requestAnimationFrame(grow);
+  }
+
+  function progress() {
+    var total = cards.length;
+    var finished = cards.filter(function (c) { return c.classList.contains("is-done") || c.classList.contains("is-skip"); }).length;
+    document.getElementById("progress").textContent = finished + " / " + total;
+    document.getElementById("fill").style.width = (total ? finished / total * 100 : 0) + "%";
+  }
+
+  var mine = data.on_my_posts || [], items = data.items || [];
+  if (mine.length) { document.getElementById("mine-section").hidden = false; mine.forEach(function (it) { render(it, document.getElementById("mine")); }); }
+  items.forEach(function (it) { render(it, document.getElementById("items")); });
+  if (!items.length) document.getElementById("items").appendChild(el("p", "empty", "Nothing fresh worth a reply right now. Check back in a few hours."));
+  var when = new Date(data.refreshed_at || data.fetched_at);
+  document.getElementById("lede").textContent = items.length + " replies, freshest first. Updated " +
+    when.toLocaleString([], { weekday: "short", hour: "2-digit", minute: "2-digit" }) + ".";
+  window.addEventListener("resize", function () { document.querySelectorAll("textarea").forEach(function (t) { t.style.height = "auto"; t.style.height = t.scrollHeight + "px"; }); });
+  progress();
+})();
+</script>

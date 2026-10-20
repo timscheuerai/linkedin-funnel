@@ -12,6 +12,12 @@
           "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
           "path": ".agents/skills/brand-review/SKILL.md",
           "treatment": "adapted context paths; retained generic procedure"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/brand-review/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -27,6 +33,12 @@
           "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
           "path": ".agents/skills/brand-system/SKILL.md",
           "treatment": "adapted context paths; retained generic procedure"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/brand-system/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -72,9 +84,30 @@
           "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
           "path": ".agents/skills/content-waterfall/SKILL.md",
           "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/content-waterfall/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
+      "name": "diorama-3d",
+      "group": "Visuals",
+      "description": "Build a 3D diorama graphic in three.js that tells a system as a place (a room, a factory floor, a machine line), with the roles and tools as glossy toys, labels projected from 3D, a 2-second build-in and a seamless loop, exported as a 1080 x 1350 still, MP4 and GIF. Use for a 3D or animated system graphic for a post or lead magnet; flat posters stay in graphics-designer and editable process maps in flowchart.",
+      "path": "skills/diorama-3d/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "814f74f3ccf18c293142a184d413525d8633fc53",
+          "path": "personal-brand/.agents/skills/diorama-3d/SKILL.md",
+          "treatment": "rewritten as a template: the author's palette, photo and copy as placeholders, own renderer, Tim's verdicts generalised; three.js vendored under MIT"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-20; references kit skills, guides and context/ files."
     },
     {
       "name": "flowchart",
@@ -108,6 +141,12 @@
           "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
           "path": "skills/graphics-designer/SKILL.md",
           "treatment": "merged into generic procedure"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/graphics-designer/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -153,9 +192,30 @@
           "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
           "path": ".agents/skills/lead-magnet-delivery/SKILL.md",
           "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/lead-magnet-delivery/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
+      "name": "linkedin-article-adapter",
+      "group": "Content waterfall",
+      "description": "Adapt a finished X Article into a native LinkedIn article while preserving its text and inline figures, recompose the cover at LinkedIn's article ratio, and prepare a numbered upload folder plus a short post to share it. Use after x-article-writer when the author wants the same article on LinkedIn.",
+      "path": "skills/linkedin-article-adapter/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/linkedin-article-adapter/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics, verdicts and workspace paths removed; ids from a git-ignored config; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-20; references kit skills, guides and context/ files."
     },
     {
       "name": "linkedin-copywriter",
@@ -174,9 +234,30 @@
           "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
           "path": "skills/linkedin-copywriter/SKILL.md",
           "treatment": "merged into generic procedure"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/linkedin-copywriter/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "linkedin-engage",
+      "group": "Engagement",
+      "description": "Find fresh posts from the author's LinkedIn watchlist through OXYGEN's managed scraper, draft 1 or 2 natural comments each where the author has a real receipt, and publish a Copy & open queue page that learns from what they actually post. Use for a LinkedIn comment round or to grow reach through comments; it never comments, likes or messages on its own.",
+      "path": "skills/linkedin-engage/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/linkedin-engage/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics, verdicts and workspace paths removed; ids from a git-ignored config; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-20; references kit skills, guides and context/ files."
     },
     {
       "name": "linkedin-hook-writer",
@@ -189,6 +270,12 @@
           "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
           "path": ".agents/skills/linkedin-hook-writer/SKILL.md",
           "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/linkedin-hook-writer/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
@@ -204,6 +291,12 @@
           "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
           "path": ".agents/skills/linkedin-unibox-reply/SKILL.md",
           "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": ".agents/skills/linkedin-reply-manager/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
@@ -234,6 +327,12 @@
           "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
           "path": ".agents/skills/longform-edit/SKILL.md",
           "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/longform-edit/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
@@ -498,6 +597,21 @@
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
     },
     {
+      "name": "video-editor",
+      "group": "Media",
+      "description": "Turn a raw talking-head or screen-demo recording, or a short, into a publish-ready edit in 1 run, in a clean caption style (off-white word-by-word captions, serif payoffs, interludes, hard reframes, no boxes), with overlays timed to the spoken word, -14 LUFS audio, an editable DaVinci Resolve timeline and a QA sheet. Use for \"edit this video\", \"make it publish ready\" or \"add captions\"; it uses talking-head-video-cut for the cut and its bundled Remotion overlay kit for graphics.",
+      "path": "skills/video-editor/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/video-editor/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics, verdicts and workspace paths removed; ids from a git-ignored config; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-20; references kit skills, guides and context/ files."
+    },
+    {
       "name": "video-use",
       "group": "Media",
       "description": "Edit a supplied video through a source-preserving transcript, timeline and visual review workflow using available rendering tools.",
@@ -538,6 +652,12 @@
           "revision": "17eb37ada46ceb2193f76eaae3658b230ed4a56d",
           "path": ".agents/skills/week-posts/SKILL.md",
           "treatment": "adapted context paths; retained generic procedure"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/week-posts/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -553,6 +673,12 @@
           "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
           "path": ".agents/skills/x-article-writer/SKILL.md",
           "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/x-article-writer/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
@@ -573,6 +699,21 @@
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
     },
     {
+      "name": "x-engage",
+      "group": "Engagement",
+      "description": "Find fresh posts from the author's X watchlist through their OXYGEN X connection, draft 1 short reply each where the author has a real practice or result to add, and publish a Reply on X queue page that learns from what they actually post. Use for a daily X reply round or to grow reach through replies; it never posts, likes or follows on its own.",
+      "path": "skills/x-engage/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/x-engage/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics, verdicts and workspace paths removed; ids from a git-ignored config; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-20; references kit skills, guides and context/ files."
+    },
+    {
       "name": "x-planner",
       "group": "Content waterfall",
       "description": "Plan the author's X posts together with them, day by day, from 3 lanes: LinkedIn posts repurposed for X, native posts from what is going viral in their niche, and their own launches or assets. Presents a slate for the author to pick and cut, drafts the picks, records their verdicts. Use when planning X for the week or when the content waterfall hands over micro posts and chapter threads.",
@@ -583,9 +724,30 @@
           "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
           "path": ".agents/skills/x-planner/SKILL.md",
           "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/x-planner/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
+      "name": "x-research",
+      "group": "Content",
+      "description": "Research X posts and conversations in the author's niche and turn the strongest ones into sourced content ideas and angles the author can support with their own evidence. Use for niche trend scans, finding strong posts, creator research or building an X creator watchlist; it produces research briefs, not published posts.",
+      "path": "skills/x-research/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/x-research/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics, verdicts and workspace paths removed; ids from a git-ignored config; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-20; references kit skills, guides and context/ files."
     },
     {
       "name": "youtube-description",
@@ -598,6 +760,12 @@
           "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
           "path": "skills/youtube-description/SKILL.md",
           "treatment": "rewritten portable procedure; no missing helper claims"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/youtube-description/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -643,6 +811,12 @@
           "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
           "path": "skills/youtube-thumbnail/SKILL.md",
           "treatment": "rewritten portable procedure; no missing helper claims"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/youtube-thumbnail/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -673,9 +847,30 @@
           "revision": "66436597ada52c78d97391d59c207f5fa32ad95b",
           "path": ".agents/skills/youtube-title-outlier-packaging/SKILL.md",
           "treatment": "rewritten as a template: private IDs, people, metrics and workspace paths removed; kit skill names and context paths"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/youtube-title-outlier-packaging/SKILL.md",
+          "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
+    },
+    {
+      "name": "youtube-video-research",
+      "group": "Content waterfall",
+      "description": "Decide the author's next YouTube video before they record it, in 3 gates. An idea found depth-first inside their niche (a wave that is hot now, applied to their audience's outcome while the niche angle is still open), packaging proven by outliers in other niches, and the first 60 seconds scripted word for word. Ends in a go or no-go scorecard and logs every upload in a channel ledger. Use for \"what should my next video be\", \"is this a good video idea\", \"validate this title or thumbnail\" or \"script the intro\".",
+      "path": "skills/youtube-video-research/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
+          "path": "personal-brand/.agents/skills/youtube-video-research/SKILL.md",
+          "treatment": "rewritten as a template: private IDs, people, metrics, verdicts and workspace paths removed; ids from a git-ignored config; kit skill names and context paths"
+        }
+      ],
+      "template_adaptation": "Added 2026-10-20; references kit skills, guides and context/ files."
     }
   ]
 }

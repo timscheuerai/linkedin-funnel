@@ -10,6 +10,8 @@ Workspace: all context paths below (identity, audience, strategy, voice, brand, 
 
 Read `AGENTS.md`, `index.md`, relevant identity and audience pages, `identity/proof.md`, `voice/linkedin-voice.md`, `voice/formats.md` and the selected pillar/funnel context. Read the full source behind the central claim.
 
+Drafts sound like a bot when the only voice input is a style guide. If the context holds the author's verbatim words (calls, DMs, voice notes, past posts), a story bank or a page on what performs on their account, read the relevant parts too. A story the author has not told in public needs their yes before it goes into copy.
+
 ## Find the post
 
 Identify one useful point, its source, the intended reader and the post's job. Work from the supplied brief and existing context; ask for missing information only when it would change the substance. Do not invent a milestone, anecdote or customer quote to make an idea interesting.
@@ -24,7 +26,7 @@ A stub voice page does not block useful editing of a supplied draft. Preserve th
 
 Check that each paragraph adds information. Cut generic praise, unsupported superlatives, repeated morals, empty transitions and slogan-like conclusions. Keep necessary explanations and qualifications. Read the opening, paragraph starts and ending together: the argument should remain understandable.
 
-Check every factual claim, quote, date and number against its source and public-use status. Keep reported results, targets and illustrative examples distinct. Use a CTA only when it fits the chosen funnel job and a real available offer.
+Check every factual claim, quote, date and number against its source and public-use status. Keep reported results, targets and illustrative examples distinct. Use a CTA only when it fits the chosen funnel job and a real available offer. Resource and video links go in the first comment and the post says so; a link to the author's own site carries UTM parameters (source `linkedin`, 1 campaign slug per piece or waterfall).
 
 For repurposing, select one argument from the source rather than compressing the entire source into a post. For revisions, address the user's requested changes first and preserve their facts and meaningful phrasing.
 

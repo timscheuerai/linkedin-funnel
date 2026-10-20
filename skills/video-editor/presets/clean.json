@@ -1,0 +1,136 @@
+{
+  "name": "clean",
+  "description": "Clean talking-head look: off-white word-by-word captions, compact hook blocks whose lines almost touch, heavy serif or number payoffs, a translucent accent marker on specific key words, hard reframes, no boxes. Colours and fonts come from overlays/src/theme.ts.",
+  "variants": {
+    "default": {
+      "highlightWords": true
+    }
+  },
+  "captions": {
+    "mode": {
+      "portrait": "full",
+      "landscape": "hooks"
+    },
+    "drop": [
+      "um",
+      "uh",
+      "uhm",
+      "erm"
+    ],
+    "drop_stutters": true,
+    "strip_punctuation": true,
+    "swiss_numbers": false,
+    "serif": "display",
+    "drop_exact": [
+      "right?",
+      "like,",
+      "um,",
+      "uh,"
+    ],
+    "note": "Add the author's own filler words to drop (for example 'essentially'). swiss_numbers writes 10'000 instead of 10,000."
+  },
+  "hooks": {
+    "open": true,
+    "open_window_s": 6.0,
+    "open_lead_max": 4,
+    "close": true,
+    "close_lead_max": 4,
+    "close_side": "right",
+    "close_side_y": 0.69,
+    "close_focus": [
+      0.8,
+      0.32
+    ],
+    "long_every_s": 40,
+    "open_tail_max": 3,
+    "mid_every_s": 12,
+    "mid_lead_max": 3
+  },
+  "highlight": {
+    "min_letters": 9,
+    "min_gap_s": 10,
+    "max_in_short": 1,
+    "note": "Translucent accent marker behind specific words only, never whole lines."
+  },
+  "reframes": {
+    "short_every_s": [
+      2.0,
+      3.2
+    ],
+    "long_every_s": [
+      7.0,
+      12.0
+    ],
+    "scales": [
+      1.12,
+      1.18,
+      1.1
+    ],
+    "payoff_scale": 1.22,
+    "min_len_s": 1.2,
+    "focus": {
+      "portrait": [
+        0.5,
+        0.32
+      ],
+      "landscape": [
+        0.5,
+        0.38
+      ]
+    }
+  },
+  "music": {
+    "enabled": false,
+    "note": "No music bed by default. To add one, set enabled true and file to a track you have the rights to (absolute, or relative to this skill folder).",
+    "file": "",
+    "gain_db": -10,
+    "fade": 0.8,
+    "short": "full",
+    "long": "intro_outro"
+  },
+  "loudness": {
+    "i": -14,
+    "tp": -1.5,
+    "lra": 11
+  },
+  "type": {
+    "colour": "palette.caption in overlays/src/theme.ts",
+    "body_px_at_1080": 68,
+    "lead_px": 49,
+    "serif_px": 126,
+    "number_px": 129,
+    "lead_line_height": 0.7,
+    "lead_word_space_em": 0.17,
+    "serif_overlap_of_size": 0.14,
+    "note": "Kit constants live in overlays/src/templates/Captions.tsx and overlays/src/theme.ts; recorded here so the preset is readable in 1 place. Small text lines touch, compact.",
+    "marker": "palette.accent at 30% in overlays/src/theme.ts"
+  },
+  "voice": {
+    "clean": false,
+    "chain": "print",
+    "nr": 12,
+    "note": "voice_print.py: noise print learned from the longest silence, constant gain, denoiser latency removed; no EQ or compressor. clean false keeps the cut's audio as it is."
+  },
+  "scenes": {
+    "note": "Blank screens (Interludes) with clean motion graphics: ring for a percentage, list for a spoken enumeration, flow for steps (flows are chosen in review). Hard cut in and out, tones alternate.",
+    "min_gap_s": 8,
+    "max_s": 5.0,
+    "tones": [
+      "dark",
+      "light"
+    ],
+    "list_stop": [
+      "meaning",
+      "like",
+      "so",
+      "right",
+      "then",
+      "obviously",
+      "well",
+      "actually",
+      "and",
+      "but"
+    ],
+    "max_beat_gap_s": 15
+  }
+}

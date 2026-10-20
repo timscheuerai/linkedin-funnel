@@ -16,5 +16,11 @@ Generic suggested replies tend to fall into these shapes. Do not copy them; rewr
 12. **Loose numbered dump:** breezy numbered steps without a clear question at the end.
 13. **Invented numbers:** prices or volumes the author never stated for this thread.
 14. **Em dashes** anywhere in DM copy.
+15. **Breezy closers:** "Shout if anything comes up." Write it plainly: "Text me if something comes up."
+16. **Stock closing question:** the same "What are you working on?" on every draft, instead of a question that builds on their message.
+17. **Copy-paste apology:** every late reply opening with the same sorry line.
+18. **Feature lines in a live buyer thread:** explaining the product when a question about their setup would move it forward.
+19. **Page summary:** listing what a linked page contains instead of sharing it casually with 1 line.
+20. **Replies to messages that need none:** answering "done", a thanks or a closing line.
 
 A booking link is fine when the person asked for a call or a call is already being arranged. The failure is the default sales closer, not every call.

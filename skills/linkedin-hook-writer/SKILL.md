@@ -28,6 +28,8 @@ The author's current instructions and wording come first. The first line can be 
 
 Use the author's own numbers only. Avoid the "Everyone is doing X. Almost nobody says Y." opener; readers recognise it as AI copy.
 
+A follow-up post on the same topic within a few days needs a different hook family, not the same receipt reworded. Open with another family (a status line such as "Claude Code is now my content team.") and move the receipt to line 2. The X version may keep the receipt first.
+
 ## Length: house targets, not platform limits
 
 - **First line: aim for about 40 to 60 characters.** A stronger 35- or 85-character line can be right.

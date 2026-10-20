@@ -1,0 +1,4 @@
+interface:
+  display_name: "X Research"
+  short_description: "Find sourced X conversations and ideas in the author's niche"
+  default_prompt: "Use $x-research to find relevant X conversations from the last 7 days and turn the strongest findings into grounded ideas for my content pillars."

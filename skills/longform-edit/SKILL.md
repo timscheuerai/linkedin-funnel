@@ -7,7 +7,7 @@ Workspace: all context paths below (identity, audience, strategy, voice, brand, 
 
 # Long-form YouTube edit
 
-Make 1 finished upload from the author's recording. Decide the treatment from the brief and the footage before building graphics. The common case is a designed intro followed by a clip-only tutorial: read [references/intro-and-tutorial.md](references/intro-and-tutorial.md).
+Make 1 finished upload from the author's recording. Decide the treatment from the brief and the footage before building graphics. The common case is a designed intro followed by a clip-only tutorial: read [references/intro-and-tutorial.md](references/intro-and-tutorial.md). When the author asks for graphics throughout the whole video, plan that treatment from the transcript instead (chapter cards at spoken transitions, short idea interludes on flat or frosted grounds, spotlights on the UI the author names, hard reframes on face-to-camera stretches), and review each planned beat rather than filling every pause. A direction for the current video always beats a previous preset.
 
 ## Edit decisions
 

@@ -8,7 +8,7 @@ Workspace: all context paths below (identity, audience, strategy, voice, brand, 
 
 # Plan the week
 
-Read `AGENTS.md`, `index.md`, the relevant identity and audience pages, `identity/proof.md`, strategy/goals.md, strategy/pillars.md, strategy/funnel.md and voice/linkedin-voice.md. Read local preferences if present.
+Read `AGENTS.md`, `index.md`, the relevant identity and audience pages, `identity/proof.md`, strategy/goals.md, strategy/pillars.md, strategy/funnel.md and voice/linkedin-voice.md. Read local preferences if present. When the context also holds the author's verbatim words, a story bank or a page on what performs on their account, read those too; personal stories come only from material marked public or approved by the author.
 
 ## Choose the dates and material
 

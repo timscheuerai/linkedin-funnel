@@ -7,7 +7,7 @@ Workspace: all context paths below (identity, audience, strategy, voice, brand, 
 
 # X planner
 
-X gets its own planning session, made together with the author. The content waterfall owns 2 X pieces per video: the video post and the X Article. Everything else on X comes from here, including the waterfall's micro posts and chapter threads.
+X gets its own planning session, made together with the author. The content waterfall owns 2 X pieces per video: the video post and the X Article. Everything else on X comes from here, including the waterfall's micro posts and chapter threads. Replies under other people's posts come from `x-engage`, not from here.
 
 ## The session
 
@@ -25,13 +25,17 @@ X gets its own planning session, made together with the author. The content wate
 7. **Schedule** only on the author's go.
 8. **Learn.** Add what the author picked and cut, with the reason, to `references/verdicts.md`. The next slate starts from those verdicts.
 
+When the author says they are overwhelmed but want to post today, skip the slate: hand over 1 finished post, ready to paste.
+
 ## What usually works
 
 Measure the author's own X posts before assuming. Building in public often carries a founder's X: their own number, milestone, decision or mistake first, the lesson after. A how-to becomes "what we did and what it did"; a trend take becomes "what happened when we tried it". Posts with media usually beat posts without. Record what the author's numbers actually show in `references/verdicts.md`.
 
 ## Lane A: LinkedIn to X
 
-Pick recent LinkedIn posts with 1 sharp point from the author's own experience: a result, a mistake and the rule it produced, a decision. Carry the point, not the LinkedIn shape. A repurpose can keep the LinkedIn hook verbatim and get to the point right after it. Default: the X version goes out the day after the LinkedIn post. Comment-to-DM resources work on X too: "1) Follow me 2) Comment "<KEYWORD>"" with the files sent by DM.
+Pick recent LinkedIn posts with 1 sharp point from the author's own experience: a result, a mistake and the rule it produced, a decision. Carry the point, not the LinkedIn shape. A repurpose can keep the LinkedIn hook verbatim and get to the point right after it. Default: the X version goes out the day after the LinkedIn post. The author may swap the LinkedIn hook for their own X line; keep it verbatim, and tag products and people by their real, verified handles.
+
+Comment-to-DM resources often do far worse on X than on LinkedIn; measure them before planning more. When the author still wants one, the post stands alone (no counts from LinkedIn, no "now on X too"), the CTA is "1) Follow me 2) Comment "<KEYWORD>"" with the files sent by DM, and the visual keeps its 2-step CTA box with "Follow" in place of LinkedIn's "Connect". Never just crop the CTA off.
 
 ## Lane B: native X, from what is going viral
 
@@ -44,7 +48,10 @@ Product launches, videos, graphics and resources the author wants out. Ask once 
 ## Writing for X
 
 - The author's voice from `voice/linkedin-voice.md` and their recent X posts, in X's shape: 1 point per post, the point in the first line, short.
+- Anti-slop on X: no role verbs ("orchestrates", "routes the work"), no "Label: description" bullets, no "Bonus:". Bullets are fine; the slop is labels and role verbs. Write a stack as tools with jobs ("Claude Code + Codex to do the work") and a process as first-person actions with plain verbs. Check the rule against posts from creators the author follows.
+- A video post with a strong receipt leads with the receipt in the author's rounding; the claim comes second.
 - A thread only when the material needs steps.
 - Keep the operator detail that makes it theirs: the tool, the number, the mistake. Cut the rest.
 - Final read: would this post stand on its own without the LinkedIn post or the video? If not, cut it or fix it.
 - Numerals, numbers only from `identity/proof.md`, no em dashes, full YouTube URLs only.
+- Links to the author's own site carry UTM parameters with the `x` source, also on a repurposed LinkedIn post.

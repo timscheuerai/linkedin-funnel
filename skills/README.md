@@ -4,9 +4,9 @@
 
 The files are here in `skills/`. Open the whole template in your coding agent and ask for a skill by name, or point it directly to its `SKILL.md`. Codex and Claude Code discovery folders link to this same library.
 
-**43 skills total:** 23 core content and branding skills, 10 content waterfall skills, 6 additional video skills and 4 OXYGEN workflow helpers. No separate content-vault installation is needed.
+**50 skills total:** 26 core content and branding skills, 12 content waterfall skills, 2 engagement skills, 6 additional video skills and 4 OXYGEN workflow helpers. No separate content-vault installation is needed.
 
-## The 23 core skills
+## The 26 core skills
 
 ### Context
 
@@ -28,6 +28,7 @@ The files are here in `skills/`. Open the whole template in your coding agent an
 | [newsletter-writer](newsletter-writer/SKILL.md) | Write a useful newsletter issue from source material, the author's voice and one coherent reader takeaway. |
 | [repurpose-content](repurpose-content/SKILL.md) | Turn an interview, newsletter, talk or other long source into distinct content pieces or visual briefs while preserving its facts and voice. |
 | [researcher](researcher/SKILL.md) | Research a content or GTM question using primary evidence and return a source-backed brief with implications and open questions. |
+| [x-research](x-research/SKILL.md) | Research X posts and conversations in the author's niche and turn the strongest into sourced content ideas and angles. |
 | [week-posts](week-posts/SKILL.md) | Plan and draft a week of content using the author's configured pillars, source material, voice, cadence and optional Notion board. |
 | [x-copywriter](x-copywriter/SKILL.md) | Draft concise X posts or threads from grounded source material and the author's actual voice. |
 
@@ -37,6 +38,7 @@ The files are here in `skills/`. Open the whole template in your coding agent an
 |---|---|
 | [brand-review](brand-review/SKILL.md) | Review a rendered graphic or visual system for message clarity, identity consistency and export quality; make fixes when requested. |
 | [brand-system](brand-system/SKILL.md) | Establish or update a client's visual identity, reusable tokens and graphic conventions from their preferences and supplied assets. |
+| [diorama-3d](diorama-3d/SKILL.md) | Build a 3D diorama graphic in three.js that tells a system as a place, with a 2-second build-in, a seamless loop and a still, MP4 and GIF. |
 | [flowchart](flowchart/SKILL.md) | Create editable flowcharts, system maps and funnels with semantic icons, structured operation cards, distinct skill and decision shapes, and verified routing. |
 | [graphics-designer](graphics-designer/SKILL.md) | Create an individual graphic, carousel or banner using the client's supplied visual rules, or a neutral unbranded layout when requested. |
 
@@ -46,6 +48,7 @@ The files are here in `skills/`. Open the whole template in your coding agent an
 |---|---|
 | [launch-video](launch-video/SKILL.md) | Create a product launch video from a truthful beat script, available assets and a reproducible motion project. |
 | [video-use](video-use/SKILL.md) | Edit a supplied video through a source-preserving transcript, timeline and visual review workflow using available rendering tools. |
+| [video-editor](video-editor/SKILL.md) | Turn a raw talking-head or screen recording into a publish-ready edit in 1 run: captions, overlays timed to the word, -14 LUFS audio, an editable timeline and a QA sheet. |
 | [youtube-description](youtube-description/SKILL.md) | Create a YouTube description, resource links and chapters from the actual final video or timestamped transcript. |
 | [youtube-publisher](youtube-publisher/SKILL.md) | Upload or update a video on the user's confirmed YouTube channel with verified metadata, processing state and requested visibility. |
 | [youtube-script](youtube-script/SKILL.md) | Write a recordable YouTube script with a clear viewer promise, evidence, demo beats and a truthful payoff. |
@@ -58,7 +61,9 @@ The files are here in `skills/`. Open the whole template in your coding agent an
 | Skill | Use it to |
 |---|---|
 | [content-waterfall](content-waterfall/SKILL.md) | Run a weekly content waterfall: find the idea of the week from what is hot on YouTube, X and LinkedIn, make 1 long video, grow its 3 roots into posts on every platform, ship the week and turn the engagers into conversations. Use when the author gives the idea of the week, wants posts from a video, hands over a recording or YouTube link, or asks to repurpose. Orchestrates the stage skills. |
+| [youtube-video-research](youtube-video-research/SKILL.md) | Decide the next YouTube video before recording in 3 gates: an idea found depth-first in the niche, packaging proven in other niches, and the first 60 seconds scripted. Ends in a go or no-go scorecard. |
 | [x-article-writer](x-article-writer/SKILL.md) | Write or revise a compact native X Article in the author's voice from their newsletter, framework, posts or lead magnet, with the strongest supported result first and useful graphics placed where they explain the argument. Also writes the X post that announces a video. Use for X Articles and illustrated long posts on X; use x-copywriter or x-planner for ordinary X posts. |
+| [linkedin-article-adapter](linkedin-article-adapter/SKILL.md) | Adapt a finished X Article into a native LinkedIn article with its text and figures preserved, a recomposed cover, an upload folder and a short post to share it. |
 | [x-planner](x-planner/SKILL.md) | Plan the author's X posts together with them, day by day, from 3 lanes: LinkedIn posts repurposed for X, native posts from what is going viral in their niche, and their own launches or assets. Presents a slate for the author to pick and cut, drafts the picks, records their verdicts. Use when planning X for the week or when the content waterfall hands over micro posts and chapter threads. |
 | [linkedin-hook-writer](linkedin-hook-writer/SKILL.md) | Write, revise or compare LinkedIn hooks in the author's voice, with measured character counts and mobile-first opening budgets. Use for hook options, first-line edits, or the opening pass inside linkedin-copywriter. |
 | [youtube-title-outlier-packaging](youtube-title-outlier-packaging/SKILL.md) | Find YouTube packaging outliers in the author's niche, draft 2 A/B titles from proven structures with every claim marked, and brief thumbnail concepts. Use when choosing or split-testing a YouTube title or packaging a video before recording. |
@@ -67,6 +72,15 @@ The files are here in `skills/`. Open the whole template in your coding agent an
 | [talking-head-video-cut](talking-head-video-cut/SKILL.md) | Cut and merge raw OBS or screen-recorded talking-head clips by selecting complete takes, trimming dead air and setup transitions, preserving the native picture, and QAing every join. Use for "remove the pauses", "cut the false starts", "just cut and merge" or a clean long-form YouTube cut. |
 | [lead-magnet-delivery](lead-magnet-delivery/SKILL.md) | Turn a LinkedIn lead-magnet post ("comment KEYWORD and I'll send it") into automatic delivery on OXYGEN. Every commenter who asks gets a DM with the link and a public "Sent it over:)" reply; 2nd-degree commenters are asked to connect first; nobody is messaged twice. Use when a lead-magnet post is live and the author asks to set up delivery or send the resource to commenters. |
 | [linkedin-unibox-reply](linkedin-unibox-reply/SKILL.md) | Draft LinkedIn DM replies in the author's voice for Unibox triage and 1:1 follow-ups, one at a time, and never send without the author's yes. Use to triage interested or unanswered LinkedIn threads, draft a DM reply, or rewrite a generic suggested reply into the author's voice. |
+
+## Engagement skills
+
+Grow reach by commenting where the author has something real to add. Both build a queue page the author works through in 1 tap; neither posts, likes or messages on its own.
+
+| Skill | Use it to |
+|---|---|
+| [linkedin-engage](linkedin-engage/SKILL.md) | Find fresh posts from the author's LinkedIn watchlist through OXYGEN, draft 1 or 2 comments each where the author has a real receipt, and publish a Copy & open queue that learns from what they post. |
+| [x-engage](x-engage/SKILL.md) | Find fresh posts from the author's X watchlist through OXYGEN, draft 1 short reply each where the author has a real practice or result to add, and publish a Reply on X queue that learns from what they post. |
 
 ## Additional video skills
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video editor"
+  short_description: "Raw recording to a publish-ready edit plus a Resolve timeline"
+  default_prompt: "Use $video-editor to edit my recording at <path> into a publish-ready YouTube video. Keep going until QA passes."

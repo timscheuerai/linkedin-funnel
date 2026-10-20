@@ -1,0 +1,4 @@
+interface:
+  display_name: "LinkedIn Article Adapter"
+  short_description: "Adapt X Articles for LinkedIn with a new cover and ordered assets"
+  default_prompt: "Use $linkedin-article-adapter to turn my finished X Article into a LinkedIn article handoff with a recomposed cover, ordered images and share copy in an upload folder."
