@@ -4,7 +4,7 @@
 
 **Watch the full walkthrough on YouTube: https://www.youtube.com/watch?v=8z_GiPtnO80**
 
-1 idea a week becomes 1 long video, and the video waterfalls into posts on every platform. Claude Code skills do most of the drafting; you pick the idea, record, read and edit. The rest of the week stays free for customers.
+1 idea a week becomes 1 or 2 long videos (for example a tutorial and a story video), and each video waterfalls into a newsletter, an X Article, posts and short-form on every platform. Claude Code skills do most of the drafting; you pick the idea, record, read and edit. The rest of the week stays free for customers.
 
 ![The content waterfall](../assets/content-waterfall.gif)
 
@@ -16,11 +16,11 @@
 |---|---|---|
 | 0 Find the idea | Scan what is hot on YouTube, X and LinkedIn, add last week's signals, pick 1 idea | [youtube-video-research](../skills/youtube-video-research/SKILL.md), [x-research](../skills/x-research/SKILL.md), [youtube-title-outlier-packaging](../skills/youtube-title-outlier-packaging/SKILL.md), [youtube-thumbnail-outlier-research](../skills/youtube-thumbnail-outlier-research/SKILL.md), [x-planner](../skills/x-planner/SKILL.md), the vidIQ plugin (optional), LinkedIn by hand |
 | 1 Make the video | Title and thumbnail first, then the outline, record, cut, describe, upload | [youtube-script](../skills/youtube-script/SKILL.md), [talking-head-video-cut](../skills/talking-head-video-cut/SKILL.md), [video-editor](../skills/video-editor/SKILL.md), [longform-edit](../skills/longform-edit/SKILL.md), [youtube-thumbnail](../skills/youtube-thumbnail/SKILL.md), [youtube-description](../skills/youtube-description/SKILL.md) |
-| 2 Grow the roots | The file: native video on LinkedIn and X. The argument: newsletter, X Article, lesson and resource posts. The transcript: chapter posts, graphics, proof posts, opinion posts, micro posts | [newsletter-writer](../skills/newsletter-writer/SKILL.md), [x-article-writer](../skills/x-article-writer/SKILL.md), [linkedin-article-adapter](../skills/linkedin-article-adapter/SKILL.md), [linkedin-copywriter](../skills/linkedin-copywriter/SKILL.md), [linkedin-hook-writer](../skills/linkedin-hook-writer/SKILL.md), [x-planner](../skills/x-planner/SKILL.md), [graphics-designer](../skills/graphics-designer/SKILL.md), [diorama-3d](../skills/diorama-3d/SKILL.md), [flowchart](../skills/flowchart/SKILL.md), [repurpose-content](../skills/repurpose-content/SKILL.md) |
+| 2 Grow the roots | The file: native video on LinkedIn and X. The argument: newsletter first, then the X Article, lesson and resource posts. The transcript: chapter posts, graphics, proof posts, opinion posts, micro posts and short-form episodes | [newsletter-writer](../skills/newsletter-writer/SKILL.md), [x-article-writer](../skills/x-article-writer/SKILL.md), [linkedin-article-adapter](../skills/linkedin-article-adapter/SKILL.md), [linkedin-copywriter](../skills/linkedin-copywriter/SKILL.md), [linkedin-hook-writer](../skills/linkedin-hook-writer/SKILL.md), [x-planner](../skills/x-planner/SKILL.md), [graphics-designer](../skills/graphics-designer/SKILL.md), [diorama-3d](../skills/diorama-3d/SKILL.md), [flowchart](../skills/flowchart/SKILL.md), [repurpose-content](../skills/repurpose-content/SKILL.md), [shortform-platform-copy](../skills/shortform-platform-copy/SKILL.md), [instagram-planner](../skills/instagram-planner/SKILL.md) |
 | 3 Ship it | Every piece on 1 board, dated from the video's release day; you give the go, the week gets scheduled | [content-waterfall](../skills/content-waterfall/SKILL.md), [Notion](notion.md) (optional), [oxygen-linkedin-marketing](../skills/oxygen-linkedin-marketing/SKILL.md) (optional) |
 | 4 Convert the engagers | Collect who engaged, check who fits, deliver the resource to commenters, start warm conversations | [Profile Watcher](profile-watcher.md), [qualification](qualification.md), [lead-magnet-delivery](../skills/lead-magnet-delivery/SKILL.md), [oxygen-sequencer](../skills/oxygen-sequencer/SKILL.md), [linkedin-unibox-reply](../skills/linkedin-unibox-reply/SKILL.md), [DM framework](dm-conversion.md); between videos, [linkedin-engage](../skills/linkedin-engage/SKILL.md) and [x-engage](../skills/x-engage/SKILL.md) for comments and replies |
 
-Every week closes the loop: rank the winners, collect the best questions from the comments, and pick the next idea from them.
+Every week closes the loop with [content-review](../skills/content-review/SKILL.md): rank the winners, collect the best questions from the comments, and pick the next idea from them.
 
 ## Set it up in Claude Code
 
@@ -50,7 +50,8 @@ draft the newsletter first and the rest of the roots from it.
 ## What to expect
 
 - About a day of work a week once the system is set up: the idea, the recording, and reading and editing the drafts.
-- Volume comes from reuse, not from writing more: 1 video feeds the newsletter, the X Article, the native uploads and a week of posts.
+- Volume comes from reuse, not from writing more: 1 video feeds the newsletter, the X Article, the native uploads and a week of posts. The newsletter is written first; every other piece reuses its argument.
+- Short-form works best as personal storytelling: shorts and reels that document your journey toward a public goal, with tips as the minority.
 - The idea matters most. Check demand before you record; content only about what you find interesting rarely travels.
 - Without a system, volume burns you out. Batch the work into 1 content day.
 

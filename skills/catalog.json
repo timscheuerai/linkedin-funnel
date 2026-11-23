@@ -76,7 +76,7 @@
     {
       "name": "content-waterfall",
       "group": "Content waterfall",
-      "description": "Run a weekly content waterfall: find the idea of the week from what is hot on YouTube, X and LinkedIn, make 1 long video, grow its 3 roots into posts on every platform, ship the week and turn the engagers into conversations. Use when the author gives the idea of the week, wants posts from a video, hands over a recording or YouTube link, or asks to repurpose. Orchestrates the stage skills.",
+      "description": "Run a weekly content waterfall: find the idea of the week from what is hot on YouTube, X and LinkedIn, make 1 or 2 long videos, grow each video's 3 roots into a newsletter, an X Article, posts and short-form on every platform, ship the week and turn the engagers into conversations. Use when the author gives the idea of the week, wants posts or a newsletter from a video, hands over a recording or YouTube link, or asks to repurpose. Orchestrates the stage skills.",
       "path": "skills/content-waterfall/SKILL.md",
       "sources": [
         {
@@ -90,6 +90,12 @@
           "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
           "path": "personal-brand/.agents/skills/content-waterfall/SKILL.md",
           "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/content-waterfall/SKILL.md",
+          "treatment": "2026-11-23 refresh: generic method changes ported (1 or 2 video trunks, research before the cut, video card first, short-form storytelling, instagram-planner, shortform-platform-copy, content-review close); private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
@@ -220,7 +226,7 @@
     {
       "name": "linkedin-copywriter",
       "group": "Content",
-      "description": "Draft or edit one LinkedIn post using the author's context, writing samples, factual sources and intended funnel job.",
+      "description": "Draft or edit one LinkedIn post using the author's context, best-performing posts, factual sources and intended funnel job, structured to skim and run through a slop pass before delivery.",
       "path": "skills/linkedin-copywriter/SKILL.md",
       "sources": [
         {
@@ -240,6 +246,12 @@
           "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
           "path": "personal-brand/.agents/skills/linkedin-copywriter/SKILL.md",
           "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/linkedin-copywriter/SKILL.md",
+          "treatment": "2026-11-23 refresh: best-post calibration, stance check, structure first, line-break rules, hook and re-hook spacing, lead-magnet text points to the graphic, X-to-LinkedIn adaptation, verified tags, slop pass; private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -276,6 +288,12 @@
           "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
           "path": "personal-brand/.agents/skills/linkedin-hook-writer/SKILL.md",
           "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/linkedin-hook-writer/SKILL.md",
+          "treatment": "2026-11-23 refresh: measured hook data first, short claim line 1, empty line between hook and re-hook inside the budget, slop pass on every option"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
@@ -355,7 +373,7 @@
     {
       "name": "newsletter-writer",
       "group": "Content",
-      "description": "Write a useful newsletter issue from source material, the author's voice and one coherent reader takeaway.",
+      "description": "Write a newsletter issue in the author's voice from a video, post or other source, with one reader takeaway. Holds the default shape for turning a YouTube video into an email, the HTML and plain-text build, validation and a draft that waits for the author's go.",
       "path": "skills/newsletter-writer/SKILL.md",
       "sources": [
         {
@@ -363,6 +381,18 @@
           "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
           "path": "skills/newsletter-writer/SKILL.md",
           "treatment": "rewritten portable procedure; no missing helper claims"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/resend-broadcast/SKILL.md",
+          "treatment": "2026-11-23 refresh: video-to-newsletter shape and generic build, validate and draft method; brand, sender, list, scripts and credentials left out"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/content-waterfall/SKILL.md",
+          "treatment": "2026-11-23 refresh: video-to-newsletter shape and generic build, validate and draft method; brand, sender, list, scripts and credentials left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -458,7 +488,7 @@
     {
       "name": "repurpose-content",
       "group": "Content",
-      "description": "Turn an interview, newsletter, talk or other long source into distinct content pieces or visual briefs while preserving its facts and voice.",
+      "description": "Turn a video transcript, interview, newsletter, talk or other long source into distinct content pieces or visual briefs by harvesting the ideas that stand on their own, while preserving its facts and voice.",
       "path": "skills/repurpose-content/SKILL.md",
       "sources": [
         {
@@ -472,6 +502,12 @@
           "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
           "path": "skills/repurpose/SKILL.md",
           "treatment": "merged into generic procedure"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/content-waterfall/SKILL.md",
+          "treatment": "2026-11-23 refresh: transcript harvest from the content waterfall (7 idea types, stand-on-its-own test, routing, funnel job before drafting, source-to-piece map)"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -679,6 +715,12 @@
           "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
           "path": "personal-brand/.agents/skills/x-article-writer/SKILL.md",
           "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/x-article-writer/SKILL.md",
+          "treatment": "2026-11-23 refresh: results-scope rule, write-like-their-LinkedIn-posts structure, simple-cover default; personal examples, dated quotes and cover references left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
@@ -686,7 +728,7 @@
     {
       "name": "x-copywriter",
       "group": "Content",
-      "description": "Draft concise X posts or threads from grounded source material and the author's actual voice.",
+      "description": "Write or rewrite the author's X posts the way they actually write, including the X version of a LinkedIn post, intro and progress posts, quote posts and high-value threads. A post the author wrote themselves goes out exactly as written. Use for any X copy; x-planner decides what goes out and when, x-article-writer writes X Articles, x-engage writes replies under other people's posts.",
       "path": "skills/x-copywriter/SKILL.md",
       "sources": [
         {
@@ -694,6 +736,12 @@
           "revision": "848abc38d4b733ebf704f5c5ff8486f3e2908412",
           "path": "skills/x-copywriter/SKILL.md",
           "treatment": "rewritten portable procedure; no missing helper claims"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/x-copywriter/SKILL.md",
+          "treatment": "2026-11-23 refresh: rebuilt from the personal-brand skill (author's own writing as the model, LinkedIn-to-X rewrite, verbatim own posts, tags, quote and intro posts, thread shape); people, metrics, IDs and verdict quotes left out"
         }
       ],
       "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
@@ -716,7 +764,7 @@
     {
       "name": "x-planner",
       "group": "Content waterfall",
-      "description": "Plan the author's X posts together with them, day by day, from 3 lanes: LinkedIn posts repurposed for X, native posts from what is going viral in their niche, and their own launches or assets. Presents a slate for the author to pick and cut, drafts the picks, records their verdicts. Use when planning X for the week or when the content waterfall hands over micro posts and chapter threads.",
+      "description": "Plan the author's X posts together with them, day by day, from 3 lanes (LinkedIn posts repurposed for X, native posts from what is going viral in their niche, and their own launches, videos and assets). Presents a slate for the author to pick and cut, drafts the picks with x-copywriter, puts them on the board, schedules on their go and records their verdicts. Use when planning X for the week, when the author wants X posts from LinkedIn posts, trends or videos, or when the content waterfall hands over micro posts and chapter threads.",
       "path": "skills/x-planner/SKILL.md",
       "sources": [
         {
@@ -730,6 +778,12 @@
           "revision": "d676524b37d10ece0f12a55f4b51e754e486fb73",
           "path": "personal-brand/.agents/skills/x-planner/SKILL.md",
           "treatment": "2026-10-20 refresh: generic method changes ported; private IDs, people, metrics and verdicts left out"
+        },
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/x-planner/SKILL.md",
+          "treatment": "2026-11-23 refresh: generic method changes ported (x-copywriter drafting, daily shape, high-value threads, grouped multi-platform posts, comment gates on X); private IDs, people, metrics and verdicts left out"
         }
       ],
       "template_adaptation": "Added 2026-10-05 with the content waterfall guide; references kit skills, guides and context/ files."
@@ -871,6 +925,51 @@
         }
       ],
       "template_adaptation": "Added 2026-10-20; references kit skills, guides and context/ files."
+    },
+    {
+      "name": "shortform-platform-copy",
+      "group": "Content waterfall",
+      "description": "Write platform-specific LinkedIn, X, Instagram Reel and YouTube Shorts copy for the author's short videos from the video and their supplied facts, then put the short on their scheduler with a cover on every channel that takes one. Use when preparing, adapting, uploading or scheduling a short for several social platforms.",
+      "path": "skills/shortform-platform-copy/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/shortform-platform-copy/SKILL.md",
+          "treatment": "2026-11-23 new port: 4 platform versions, Instagram caption rules, a cover on every channel, 1 grouped post, no library music on YouTube; private connection IDs, CLI flags, people, metrics and verdicts left out"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "content-review",
+      "group": "Content waterfall",
+      "description": "Review the author's published content, platform performance and production workflow, then turn the evidence into the next experiment. Use for a YouTube review, a content retrospective, why a piece underperformed, the close of a content waterfall or a review across platforms. YouTube has the detailed collection workflow; LinkedIn, X and newsletters share the review framework. For researching the next video, use youtube-video-research.",
+      "path": "skills/content-review/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/content-review/SKILL.md",
+          "treatment": "2026-11-23 new port: framework, report shape and YouTube reference kept; private channel ID, credentials, local scripts and baseline pages replaced with generic steps"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
+    },
+    {
+      "name": "instagram-planner",
+      "group": "Content waterfall",
+      "description": "Plan the author's Instagram week with them and shape each piece into a proper format. Checks that the 3 format families (talking reel, non-talking reel, carousel) are all covered, picks a sub-format per idea, writes the hook (type, wider angle, visual hook), the problem-pursuit-payoff beats, the b-roll shot list and the caption plan, and puts each pick on the content board. Use for \"plan Instagram\", \"reels for this week\", \"make this a reel\", \"make this a carousel\", \"which format\", \"b-roll list\" or \"shot list\". Not for the edit itself (video-editor, shorts-edit), the final platform copy and scheduling (shortform-platform-copy) or carousel rendering (graphics-designer).",
+      "path": "skills/instagram-planner/SKILL.md",
+      "sources": [
+        {
+          "repo": "OXYGEN-CRO/oxygen-knowledge",
+          "revision": "09a9656a4c9453475ff452763710e98658fc0568",
+          "path": "personal-brand/.agents/skills/instagram-planner/SKILL.md",
+          "treatment": "2026-11-23 new port: format families, sub-format table, planning session, brief and b-roll method kept; goals, people, local paths, shoot inventory and verdict history left out"
+        }
+      ],
+      "template_adaptation": "Published in the LinkedIn Funnel skill directory; workflow helpers adapted to the focused guide."
     }
   ]
 }

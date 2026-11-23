@@ -36,9 +36,15 @@ The YouTube video goes live on YYYY-MM-DD and feeds <n> pieces, all dated from t
 | … | … | … | … |
 | n | Close | <resource, newsletter> | 1 action |
 
+Recording setup: <clean screen, accounts safe to show, no client data, 1 dry run>.
+
 ## Packaging
 
-<2 titles, 2 thumbnail directions, their claim status.>
+<2 titles, 2 thumbnail directions, their claim status, with links to the research. Note any earlier session that already owns them.>
+
+## Story notes
+
+<What happened this week toward the author's public goal: moments worth a short-form episode, with the receipt for each.>
 
 ## The waterfall, dated
 

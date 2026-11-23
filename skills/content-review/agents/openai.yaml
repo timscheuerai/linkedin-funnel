@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Review"
+  short_description: "Review content outcomes and improve the next cycle"
+  default_prompt: "Use $content-review to review my recent YouTube content, identify the strongest evidence-backed improvement, and propose the next experiment."
